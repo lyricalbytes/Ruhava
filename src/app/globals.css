@@ -1,37 +1,95 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* Tailwind reset / base styles */
+/* Tailwind base & utilities */
 @import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
-/* Tailwind utility classes */
-@tailwind utilities;
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-/* Add any custom global styles here */
+/* Larken font from local OTF files */
+@font-face {
+  font-family: 'Larken';
+  src: url('/fonts/Larken-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Larken';
+  src: url('/fonts/Larken-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply to body */
+body {
+  font-family: 'Larken', 'Geist', 'Lato', sans-serif;
+}
+
+/* Brand colors */
+:root {
+  --background: #FAF8F4;
+  --foreground: #0C0C0C;
+  --accent: #C6AA70;
+}
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+.text-4xl {
+  font-size: 2.25rem !important;
+}
 
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.bg-gold {
+  background-color: #C6AA70;
+}
+
+.px-2 {
+  padding-right: 2%;
+  padding-left: 2%;
+}
+.py-1 {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.font-Lato {
+  font-family: Lato;
+}
+.font-semibold {
+  font-weight: 600;
+}
+#btn1:hover {
+  background-color: #0C0C0C;
+  color: #FAF8F4;
+}
+.border-gold  {
+  border-color: #C6AA70;
+}
+.text-sm {
+  font-size: 14px;
+}
+#br1 {
+  padding-bottom: 10px;
+  background-color: #C6AA70;
+}
+.tracking-wide {
+  letter-spacing: 14%;
+}
+.font-medium {
+  font-weight: 500;
+}
+.text-xs {
+  font-size: 12px;
+}
+#navbtn:hover {
+  color: #C6AA70;
+}
