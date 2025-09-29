@@ -1,95 +1,106 @@
-/* Tailwind base & utilities */
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
+/* Removed other imports as this one alone does all that part */
+/*
+This feels unneccessary to me why bcz it is as tailwindcss already does this
+@import "tailwindcss/utilities";
+@import "tailwindcss/preflight";
+*/
+
+/* Removed @font-face instead using next/font/local to optimise fonts usage */
+
+/* Replacing this manula font face with efficient next/font/local */
 @font-face {
   font-family: 'Lato';
-  src: url('/fonts/Lato-Regular.ttf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Larken font from local OTF files */
-@font-face {
-  font-family: 'Larken';
-  src: url('/fonts/Larken-Regular.otf') format('opentype');
+  src: url('../fonts/Lato-Regular.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Larken';
-  src: url('/fonts/Larken-Bold.otf') format('opentype');
+  src: url('../fonts/Larken-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Larken';
+  src: url('../fonts/Larken-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
-}
+} 
 
-/* Apply to body */
-body {
-  font-family: 'Larken', 'Geist', 'Lato', sans-serif;
-}
 
-/* Brand colors */
 :root {
-  --background: #FAF8F4;
-  --foreground: #0C0C0C;
-  --accent: #C6AA70;
+  --background: #faf8f4;
+  --foreground: #0c0c0c;
+  --accent: #c6aa70;
+
+  /* Mentioned in the docs - so added it */
+  --ivory: #f8f6f0;
+  --charcoal: #2c2c2c;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: 'Larken', 'Geist', 'Lato', sans-serif;
 }
 
-.text-4xl {
-  font-size: 2.25rem !important;
+/* For custom classes used @layer utilities {}} */
+@layer utilities {
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .font-bold {
+    font-weight: 700 !important;
+  }
+
+  .bg-gold {
+    background-color: var(--accent);
+  }
+
+  .px-2 {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+  .py-1 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .font-Lato {
+    font-family: Lato;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
+  .border-gold {
+    border-color: var(--accent);
+  }
+  .text-sm {
+    font-size: 14px;
+  }
+  .tracking-wide {
+    letter-spacing: 14%;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+  .text-xs {
+    font-size: 12px;
+  }
 }
 
-.font-bold {
-  font-weight: 700 !important;
-}
-
-.bg-gold {
-  background-color: #C6AA70;
-}
-
-.px-2 {
-  padding-right: 2%;
-  padding-left: 2%;
-}
-.py-1 {
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
-.font-Lato {
-  font-family: Lato;
-}
-.font-semibold {
-  font-weight: 600;
-}
 #btn1:hover {
-  background-color: #0C0C0C;
-  color: #FAF8F4;
-}
-.border-gold  {
-  border-color: #C6AA70;
-}
-.text-sm {
-  font-size: 14px;
+  background-color: #0c0c0c;
+  color: #faf8f4;
 }
 #br1 {
   padding-bottom: 10px;
-  background-color: #C6AA70;
-}
-.tracking-wide {
-  letter-spacing: 14%;
-}
-.font-medium {
-  font-weight: 500;
-}
-.text-xs {
-  font-size: 12px;
+  background-color: var(--accent);
 }
 #navbtn:hover {
-  color: #C6AA70;
+  color: var(--accent);
 }

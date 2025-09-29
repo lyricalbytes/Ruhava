@@ -1,16 +1,25 @@
-import Image from "next/image";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-ivory">
-      <h1 className="text-4xl font-Larken font-bold text-charcoal">
-        Tailwind Works ✅
-      </h1>
-      
-      <button id="btn1" className="bg-gold text-charcoal mx-[10px] px-2 py-1 font-Lato font-semibold hover:bg-charcoal hover:text-ivory transition delay-100 duration-200 ease-in">
-  Join Waitlist
-</button>
+    <main className="bg-ivory text-charcoal font-lato">
+      <Header />
 
-    </div>
+      <main className="min-h-screen flex items-center justify-center bg-ivory">
+        <h1 className="text-4xl font-Larken font-bold text-charcoal">
+          Tailwind Works ✅
+        </h1>
+
+        <button
+          id="btn1"
+          className="bg-gold text-charcoal mx-[10px] px-2 py-1 font-Lato font-semibold hover:bg-charcoal hover:text-ivory transition delay-100 duration-200 ease-in"
+        >
+          Join Waitlist
+        </button>
+      </main>
+
+      <Footer />
+    </main>
   );
 }
