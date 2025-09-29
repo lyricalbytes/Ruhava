@@ -8,29 +8,29 @@ This feels unneccessary to me why bcz it is as tailwindcss already does this
 */
 
 /* Removed @font-face instead using next/font/local to optimise fonts usage */
-/* 
-Replacing this manula font face with efficient next/font/local
+
+/* Replacing this manula font face with efficient next/font/local */
 @font-face {
   font-family: 'Lato';
-  src: url('/fonts/Lato-Regular.ttf') format('opentype');
+  src: url('../fonts/Lato-Regular.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Larken';
-  src: url('/fonts/Larken-Regular.otf') format('opentype');
+  src: url('../fonts/Larken-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Larken';
-  src: url('/fonts/Larken-Bold.otf') format('opentype');
+  src: url('../fonts/Larken-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 } 
-*/
+
 
 :root {
   --background: #faf8f4;
@@ -45,8 +45,7 @@ Replacing this manula font face with efficient next/font/local
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-larken), var(--font-geist), var(--font-lato),
-    sans-serif;
+  font-family: 'Larken', 'Geist', 'Lato', sans-serif;
 }
 
 /* For custom classes used @layer utilities {}} */
