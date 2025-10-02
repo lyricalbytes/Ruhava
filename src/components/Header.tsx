@@ -1,3 +1,5 @@
+import { Search, User, Star, ShoppingBag } from "lucide-react";
+
 export default function Header() {
   const navItems = [
     "FRAGRANCE",
@@ -13,20 +15,55 @@ export default function Header() {
   ];
 
   return (
-    <header className="justify-between items-center  border-b border-gold">
-      <div id="br1"></div>
+    <header className="border-b border-gold">
+      <div className="bg-gold pb-2.5"></div>
 
-      <h1 className="text-center font-Larken font-medium text-4xl tracking-wide py-[24px]">
-        RUHAVA
-      </h1>
+      {/* Logo row with icons - using grid for perfect centering */}
+      <div className="grid grid-cols-3 items-center py-6 px-56">
+        {/* Left side - empty space for balance */}
+        <div></div>
 
-      <nav className="text-center space-x-6 pb-[24px]">
-        {navItems.map((item, idx) => (
+        {/* Center - Logo */}
+        <h1 className="text-center font-larken font-medium text-4xl tracking-wide">
+          RUHAVA
+        </h1>
+
+        {/* Right side - Icons */}
+        <div className="flex items-center justify-end gap-6 px-6">
+          <button
+            className="hover:text-gold transition-colors cursor-pointer"
+            aria-label="Search"
+          >
+            <Search size={20} />
+          </button>
+          <button
+            className="hover:text-gold transition-colors cursor-pointer"
+            aria-label="Account"
+          >
+            <User size={20} />
+          </button>
+          <button
+            className="hover:text-gold transition-colors cursor-pointer"
+            aria-label="Wishlist"
+          >
+            <Star size={20} />
+          </button>
+          <button
+            className="hover:text-gold transition-colors cursor-pointer"
+            aria-label="Shopping bag"
+          >
+            <ShoppingBag size={20} />
+          </button>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <nav className="text-center space-x-6 pb-6">
+        {navItems.map((item) => (
           <a
             key={item}
             href="#"
-            id="navbtn"
-            className={`hover:text-gold font-Lato text-xs font-semibold tracking-wide ${
+            className={`hover:text-gold text-xs font-semibold tracking-wide ${
               item === "ABOUT RUHAVA" ? "pl-[40px] px-[10px]" : "px-[12px]"
             }`}
           >
