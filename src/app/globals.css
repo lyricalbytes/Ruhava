@@ -8,7 +8,9 @@
   --color-gold: #c6aa70;
   --color-ivory: #faf8f4;
   --color-charcoal: #0c0c0c;
+}
 
+@theme inline {
   --font-lato: var(--font-lato), sans-serif;
   --font-larken: var(--font-larken), sans-serif;
 }
