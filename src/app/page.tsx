@@ -10,7 +10,7 @@ export default function Home() {
 
       <section
         className="relative flex items-start justify-center min-h-screen bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/hero-bg.png')" }}
+        style={{ backgroundImage: "url('/assets/hero-bg.webp')" }}
       >
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 flex flex-col items-center w-full pt-[50vh]">
@@ -32,7 +32,7 @@ export default function Home() {
 
       <section
         className="relative flex items-center justify-center min-h-[80vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/bg-img-1.png')" }}
+        style={{ backgroundImage: "url('/assets/bg-img-1.webp')" }}
       ></section>
 
       <Footer />
