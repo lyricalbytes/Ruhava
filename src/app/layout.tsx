@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
 
 /* Used Lato as it was available and set weight to 400 as it was mentioned in css file */
 const lato = Lato({
@@ -32,8 +33,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${larken.variable} ${lato.variable} antialiased`}>
-        {children}
+         {/* Wrap app with CartProvider */}
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
 }
+
+
+
+  

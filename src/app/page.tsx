@@ -1,6 +1,10 @@
+"use client";
 import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/context/CartContext";
+import ProductCard from "@/components/ProductCard";
+import products from "@/data/products";
 
 export default function Home() {
   return (
@@ -30,7 +34,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section
+       <div className="max-w-6xl mx-auto py-10">
+
+      <h1 className="text-3xl font-light tracking-tight mb-8">
+        Our Collections
+      </h1>
+
+      {/* Display Product Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+      
+    </div>
+
+     <section
         className="relative flex items-center justify-center min-h-[80vh] bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/assets/bg-img-1.webp')" }}
       ></section>

@@ -1,4 +1,7 @@
+"use client";
 import { Search, User, Star, ShoppingBag } from "lucide-react";
+import Link from "next/link";
+
 
 export default function DesktopHeader() {
   const navItems = [
@@ -41,12 +44,14 @@ export default function DesktopHeader() {
           >
             <Star size={20} />
           </button>
-          <button
-            className="hover:text-gold transition-colors cursor-pointer"
-            aria-label="Shopping bag"
-          >
-            <ShoppingBag size={20} />
-          </button>
+          <Link href="/cart">
+            <button
+              className="hover:text-gold transition-colors cursor-pointer"
+              aria-label="Shopping bag"
+            >
+              <ShoppingBag size={20} />
+            </button>
+          </Link>
         </div>
       </div>
       <nav className="flex justify-center pb-6 overflow-x-auto scrollbar-hide">
