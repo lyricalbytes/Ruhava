@@ -28,9 +28,9 @@ export default function Home() {
               EAU DE PARFUM
             </span>
           </h1>
-          <button className="bg-gold text-charcoal px-8 py-4 font-semibold hover:bg-charcoal hover:text-ivory transition delay-100 duration-200 ease-in">
+          <a href='https://tally.so/r/3N1aK0'><button className="bg-gold text-charcoal px-8 py-4 font-semibold hover:bg-charcoal hover:text-ivory transition delay-100 duration-200 ease-in">
             JOIN WAITLIST
-          </button>
+          </button></a>
         </div>
       </section>
 
