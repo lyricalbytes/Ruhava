@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "The First Soul",
     price: 1600,
-    image: "/assets/products/tfs.png",
+    image: "/assets/Products/tfs.png",
   },
   {
     id: 2,
