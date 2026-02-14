@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import ProductCard from "@/components/ProductCard";
 import products from "@/data/products";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -28,9 +29,9 @@ export default function Home() {
               EAU DE PARFUM
             </span>
           </h1>
-          <a href='https://tally.so/r/3N1aK0'><button className="bg-gold text-charcoal px-8 py-4 font-semibold hover:bg-charcoal hover:text-ivory transition delay-100 duration-200 ease-in">
+           <Link href="https://tally.so/r/3N1aK0" passHref><button className="bg-gold text-charcoal px-8 py-4 font-semibold hover:bg-charcoal hover:text-ivory transition delay-100 duration-200 ease-in">
             JOIN WAITLIST
-          </button></a>
+          </button></Link>
         </div>
       </section>
 
