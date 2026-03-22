@@ -19,26 +19,26 @@ export default function MobileHeader() {
       <div className="flex items-center justify-between py-3 px-4">
         <div className="flex items-center gap-4">
           <button
-            className=" cursor-pointer"
+            className=" cursor-pointer scale-y-80"
             aria-label="Menu"
             onClick={() => setMenuOpen(true)}
           >
             <Menu size={20} strokeWidth={1.5}/>
           </button>
-          <button
+         {/*  <button
             className="hover:text-gold cursor-pointer"
             aria-label="Search"
           >
-            <Search size={20} strokeWidth={1.5}/>
-          </button>
-        </div>
+           <Search size={20} strokeWidth={1.5}/>
+          </button> */}
+        </div> 
 
-        <h1 className="font-larken font-medium text-xl tracking-wider">
+        <h1 className="font-larken font-medium text-xl tracking-wider scale-y-95">
           RUHAVA
         </h1>
 
-        <div className="flex items-center gap-4">
-          <button
+         <div className="flex items-center gap-4">
+         {/*  <button
             className="hover:text-gold cursor-pointer"
             aria-label="Account"
           >
@@ -49,7 +49,7 @@ export default function MobileHeader() {
             aria-label="Shopping bag"
           >
             <ShoppingBag size={20} strokeWidth={1.5}/>
-          </button>
+          </button> */}  
         </div>
       </div>
 
@@ -71,7 +71,7 @@ export default function MobileHeader() {
                 <a
                   key={item}
                   href="#"
-                  className="text-charcoal text-[13px] font-semibold transition-colors"
+                  className="text-charcoal text-[13px] font-semibold transition-colors scale-y-95"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item}

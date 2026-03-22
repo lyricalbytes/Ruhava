@@ -18,12 +18,12 @@ export default function Home() {
         className="relative flex items-start justify-center h-628px bg-center bg-cover bg-no-repeat cursor-pointer"
         style={{ backgroundImage: "url('/assets/hero-bg copy.webp')" }}
       >
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/10" />
         <div className="relative z-10 flex flex-col items-center w-full pt-[50vh] pb-[8vh]">
-          <span className="text-xs tracking-widest text-ivory mb-1 font-semibold uppercase">
-            EXTRAIT DE PARFUM
+          <span className="text-xs tracking-widest text-ivory mb-1 font-semibold uppercase scale-y-95">
+            A RUHAVA CREATION
           </span>
-          <h1 className="text-2xl lg:text-4xl md:text-3xl sm:text-2xl font-lato font-bold tracking-wide text-ivory mb-4 text-center leading-tight drop-shadow-lg">
+          <h1 className="text-2xl lg:text-4xl md:text-3xl sm:text-2xl font-lato font-bold tracking-wide text-ivory mb-4 text-center leading-tight drop-shadow-lg scale-y-95">
             THE FIRST SOUL
             <br />
            {/* <span className="block text-sm md:text-sm font-normal mt-2">
@@ -31,21 +31,21 @@ export default function Home() {
               Fifty Bottles prepared by hand.
             </span> */}
           </h1>
-           <Link href="https://tally.so/r/3N1aK0" passHref><button className="bg-ivory text-charcoal px-6 py-4 font-semibold hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wide">
+           <Link href="https://tally.so/r/3N1aK0" passHref><button className="bg-ivory text-charcoal px-6 py-4.5 font-semibold hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wide scale-y-95">
             DISCOVER
           </button></Link>
         </div>
       </section>
       </Link>
 
-       <div className="max-w-6xl mx-auto py-10">
+      {/* <div className="max-w-6xl mx-auto py-10">
 
-      <h1 className="text-3xl font-light tracking-tight mb-8">
+       <h1 className="text-3xl font-light tracking-tight mb-8">
         Our Collections
-      </h1>
+      </h1> */}
 
       {/* Display Product Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     {/*  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -56,7 +56,7 @@ export default function Home() {
      <section
         className="relative flex items-center justify-center min-h-[80vh] bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/assets/bg-img-1.webp')" }}
-      ></section>
+      ></section> */}
 
       <Footer />
     </main>
