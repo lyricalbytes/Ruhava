@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, Search, User, ShoppingBag, X } from "lucide-react";
+import Link from "next/link";
 
 const navItems = [
   "THE HOUSE",
@@ -14,9 +15,9 @@ export default function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className=" block md:hidden">
+    <header className=" block md:hidden sticky top-0 z-200">
       <div className="bg-charcoal pb-2"></div>
-      <div className="flex items-center justify-between py-3 px-4">
+      <div className="flex items-center justify-between py-3 px-4 bg-ivory">
         <div className="flex items-center gap-4">
           <button
             className=" cursor-pointer scale-y-80"
@@ -33,9 +34,9 @@ export default function MobileHeader() {
           </button> */}
         </div> 
 
-        <h1 className="font-larken font-medium text-xl tracking-wider scale-y-95">
+        <Link href="/" className="font-larken font-normal text-xl tracking-wider scale-y-95"><h1>
           RUHAVA
-        </h1>
+        </h1></Link>
 
          <div className="flex items-center gap-4">
          {/*  <button

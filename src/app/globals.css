@@ -14,4 +14,5 @@
 @theme inline {
   --font-lato: var(--font-lato), sans-serif;
   --font-larken: var(--font-larken), sans-serif;
+  --font-tenor: var(--font-tenor), sans-serif;
 }
