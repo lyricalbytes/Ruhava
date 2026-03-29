@@ -3,6 +3,9 @@ import { useState } from "react";
 import { Menu, Search, User, ShoppingBag, X } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
 
 const navItems = [
   "THE HOUSE",
@@ -55,9 +58,24 @@ export default function MobileHeader() {
         </div>
       </div>
 
+      <AnimatePresence>
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex">
-          <div className="bg-ivory w-4/5 max-w-xs h-full flex flex-col p-6">
+        <div className="fixed inset-0 z-50 flex ">
+          <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setMenuOpen(false)}
+        className="absolute inset-0  bg-black/60"
+      />
+          
+          <motion.div
+        initial={{ x: "-100%" }} // Starts off-screen to the left
+        animate={{ x: 0 }}       // Slides in to view
+        exit={{ x: "-100%" }}    // Slides back out
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+        className="relative bg-ivory w-4/5 max-w-xs h-full flex flex-col p-6 shadow-xl"
+      >
             <div className="flex items-center justify-between mb-8">
              <span className="font-larken text-xl">{/*Menu*/}</span> 
               <button
@@ -73,12 +91,15 @@ export default function MobileHeader() {
                 <a
                   key={item}
                   href="#"
-                  className="text-charcoal text-[13px] font-semibold transition-colors scale-y-95"
+                  className="text-charcoal text-[13px] font-semibold transition-colors scale-y-95 flex"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item}
+                  <div className="mx-auto mr-0.5"><FontAwesomeIcon icon={faAngleRight} /></div>
                 </a>
+                
               ))}
+              
               <div className="flex-1" />
               {/* <a
                 href="#"
@@ -88,11 +109,13 @@ export default function MobileHeader() {
                 ABOUT RUHAVA
               </a> */}
             </nav>
-          </div>
+            </motion.div>
+          
 
           <div className="flex-1" onClick={() => setMenuOpen(false)} />
         </div>
       )} 
+      </AnimatePresence>
       
     </header>
   );
