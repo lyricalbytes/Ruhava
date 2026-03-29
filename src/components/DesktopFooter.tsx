@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
 import { faFacebook, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { motion } from "framer-motion";
 
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal hidden md:block">
+    <footer className="bg-charcoal hidden md:block bottom-0 ">
       
-      <h1 className="text-center font-larken font-normal text-[34px] tracking-wider scale-y-95 py-25 text-ivory">
+      <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-95 py-25 text-ivory">
           RUHAVA
         </h1>
       <div className='flex py-5'>
@@ -30,7 +31,7 @@ export default function Footer() {
       <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faInstagram} /></a>
       </div>
       </div>
-      <div className='py-4'></div>
+      <div className='py-6'></div>
       
     </footer>
   );

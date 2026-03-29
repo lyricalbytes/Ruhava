@@ -16,3 +16,8 @@
   --font-larken: var(--font-larken), sans-serif;
   --font-tenor: var(--font-tenor), sans-serif;
 }
+
+html, body {
+  background-color: #1a1a1a; /* Match your footer/charcoal color exactly */
+  overscroll-behavior-y: none; /* Stops the "bounce" that reveals the white gap */
+}

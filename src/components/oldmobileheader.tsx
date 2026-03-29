@@ -35,7 +35,7 @@ export default function MobileHeader() {
           </button> */}
         </div> 
 
-        <Link href="/" className="font-larken font-normal text-xl tracking-widest scale-y-95"><h1>
+        <Link href="/" className="font-larken font-normal text-xl tracking-wider scale-y-95"><h1>
           RUHAVA
         </h1></Link>
 
@@ -92,8 +92,7 @@ export default function MobileHeader() {
 
           <div className="flex-1" onClick={() => setMenuOpen(false)} />
         </div>
-      )} 
-      
+      )}
     </header>
   );
 }
