@@ -3,6 +3,7 @@ import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
 import DesktopFooter from "@/components/DesktopFooter";
 import MobileFooter from "@/components/MobileFooter";
+import ContactWidget from "@/components/ContactWidgetDesktop";
 import { CartProvider } from "@/context/CartContext";
 import ProductCard from "@/components/ProductCard";
 import products from "@/data/products";
@@ -86,7 +87,8 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
 
       <div className=""></div>
 
-      
+      <ContactWidget />
+
       <footer className="sticky bottom-0 left-0 w-full z-10">
       <DesktopFooter />
       </footer>

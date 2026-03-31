@@ -3,6 +3,7 @@ import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
 import DesktopFooter from "@/components/DesktopFooter";
 import MobileFooter from "@/components/MobileFooter";
+import ContactWidget from "@/components/ContactWidgetDesktop";
 import Image from "next/image";
 import { Span } from "next/dist/trace";
 import { Search, User, Star, ShoppingBag } from "lucide-react";
@@ -92,7 +93,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/60 flex items-center justify-center z-[100] p-4"
+      className="fixed inset-0 bg-black/60 flex items-center justify-center z-100 p-4"
       onClick={() => setIsOpen(false)} // Close on backdrop click
     >
       <motion.div 
@@ -110,10 +111,10 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
           <span className="text-xl font-light">✕</span>
         </button>
 
-        <h2 className="font-larken text-[24px] mb-2 tracking-wider text-charcoal scale-y-95">
+        <h2 className="font-larken text-[20px] lg:text-[22px] mb-2 tracking-widest text-charcoal scale-y-95 uppercase">
           Reserve a Creation
         </h2>
-        <p className="text-[14px] text-grey font-lato mb-12 tracking-widest scale-y-95">
+        <p className="text-[14px] lg:text-[14px] text-grey font-lato mb-12 scale-y-95">
           Current Drop: The First Soul
         </p>
 
@@ -137,9 +138,9 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
                 type={field.type}
                 name={field.name}
                 placeholder=" " 
-                className="peer w-full bg-transparent border-b border-grey/30 py-2 outline-none text-sm text-charcoal transition-colors duration-500 focus:border-charcoal group-hover:border-grey scale-y-95 font-lato"
+                className="peer w-full bg-transparent border-b border-grey/30 py-2 outline-none text-[14px] text-charcoal transition-colors duration-500 focus:border-charcoal group-hover:border-grey scale-y-95 font-lato"
               />
-              <label className="absolute left-0 top-2 text-grey text-sm pointer-events-none transition-all duration-300 tracking-widest scale-y-95 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px] font-lato">
+              <label className="absolute left-0 top-2 text-grey text-[14px] pointer-events-none transition-all duration-300 scale-y-95 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px] font-lato">
                 {field.label}
               </label>
             </div>
@@ -149,9 +150,9 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
             <textarea
               name="message"
               placeholder=" "
-              className="peer w-full bg-transparent border-b border-grey/30 py-2 outline-none text-sm text-charcoal transition-colors duration-500 focus:border-charcoal group-hover:border-grey resize-none h-20 scale-y-95 font-lato"
+              className="peer w-full bg-transparent border-b border-grey/30 py-2 outline-none text-[14px] text-charcoal transition-colors duration-500 focus:border-charcoal group-hover:border-grey resize-none h-20 scale-y-95 font-lato"
             />
-            <label className="absolute left-0 top-2 text-grey text-sm pointer-events-none transition-all duration-300 tracking-widest peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px] scale-y-95 font-lato">
+            <label className="absolute left-0 top-2 text-grey text-[14px] pointer-events-none transition-all duration-300 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px] scale-y-95 font-lato">
               Gift Message (Optional)
             </label>
           </div>
@@ -167,6 +168,8 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
     </motion.div>
   )}
 </AnimatePresence>
+
+     <ContactWidget />
 
       <footer className="sticky bottom-0 left-0 w-full z-10">
       <DesktopFooter />

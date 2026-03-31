@@ -1,5 +1,5 @@
 "use client";
-import { Search, User, Star, ShoppingBag } from "lucide-react";
+import { Search, User, Star, ShoppingBag, Handbag } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -55,38 +55,38 @@ useEffect(() => {
       <div className={`flex items-center justify-between transition-all duration-500 ${
       isScrolled ? "py-3" : "py-5"
     } px-4 lg:px-12 xl:px-24`}>
-        {/* <div className="flex-1" /> */}
-        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-95"><h1>
+        <div className="flex-1" /> 
+        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-95 mx-85"><h1>
           RUHAVA
         </h1></Link>
-        {/* <div className="flex items-center justify-center gap-3 lg:gap-6 flex-1">
+         <div className="flex items-center justify-center gap-3 lg:gap-5 flex-1">
           <button
-            className="hover:text-gold transition-colors cursor-pointer"
+            className="cursor-pointer"
             aria-label="Search"
           >
-            <Search size={20} strokeWidth={1.5} />
+            <Search size={18} strokeWidth={1.5} />
           </button>
           <button
-            className="hover:text-gold transition-colors cursor-pointer"
+            className="cursor-pointer"
             aria-label="Account"
           >
-            <User size={20} strokeWidth={1.5} />
+            <User size={18} strokeWidth={1.5} />
           </button>
           <button
-            className="hover:text-gold transition-colors cursor-pointer"
+            className="cursor-pointer"
             aria-label="Wishlist"
           >
-            <Star size={20} strokeWidth={1.5} />
+            <Star size={18} strokeWidth={1.5} />
           </button>
           <Link href="/cart">
             <button
-              className="hover:text-gold transition-colors cursor-pointer"
+              className="cursor-pointer mt-1.5"
               aria-label="Shopping bag"
             >
-              <ShoppingBag size={20} strokeWidth={1.5} />
+              <Handbag size={18} strokeWidth={1.5} />
             </button>
           </Link>
-        </div> */}
+        </div> 
       </div>
       <nav className={`flex justify-center transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] overflow-hidden ${
       isScrolled ? "max-h-0 opacity-0 transform -translate-y-2" : "max-h-20 opacity-100 transform translate-y-0 pb-6"
