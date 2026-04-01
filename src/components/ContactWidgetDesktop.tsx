@@ -12,7 +12,7 @@ export default function ContactWidget() {
 
       <div className='flex'>
       <nav className='ml-30'>
-          <h2 className='text-charcoal scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             Contact an Advisor
           </h2>
             <p className='space-x-4 text-grey font-lato text-[14px]'>
@@ -23,7 +23,7 @@ export default function ContactWidget() {
           </nav>
 
           <nav className='ml-14 mx-2'>
-          <h2 className='text-charcoal scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             Find a Store
           </h2>
               <p className='space-x-4 text-grey font-lato text-[14px]'>
@@ -71,7 +71,7 @@ export default function ContactWidget() {
               
 
           <nav className='ml-10 mx-2'>
-          <h2 className='text-charcoal scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             Newsletter
           </h2>
               <p className='space-x-4 text-grey font-lato text-[14px]'>

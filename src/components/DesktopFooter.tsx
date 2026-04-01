@@ -9,14 +9,14 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal hidden md:block bottom-0 ">
       
-      <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-95 py-28 text-ivory">
+      <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-90 py-28 text-ivory">
           RUHAVA
         </h1>
 
         <div className='flex mt-8'>
           
           <nav className='ml-30 mb-15 mx-13'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5'>
             EXPLORE RUHAVA
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
@@ -42,7 +42,7 @@ export default function Footer() {
           </nav>
 
           <nav className='ml-30 mb-15 mx-13'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             ONLINE SERVICES
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
@@ -65,7 +65,7 @@ export default function Footer() {
           </nav>
 
           <nav className='ml-30 mb-15 mx-13'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             Boutique SERVICES
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
@@ -79,7 +79,7 @@ export default function Footer() {
           </nav>
 
           <nav className='ml-30 mb-15 mx-13'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[12.5px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             The House of Ruhava
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">

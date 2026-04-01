@@ -38,7 +38,7 @@ export default function MobileHeader() {
           </button> 
         </div> 
 
-        <Link href="/" className="font-larken font-normal text-[20.5px] tracking-widest scale-y-95"><h1>
+        <Link href="/" className="font-larken font-normal text-[20.5px] tracking-widest scale-y-90"><h1>
           RUHAVA
         </h1></Link>
 
@@ -91,7 +91,7 @@ export default function MobileHeader() {
             <Link
               key={item.href}
               href={item.href}
-                  className="text-charcoal text-[13px] font-semibold transition-colors scale-y-95 flex"
+                  className="text-charcoal text-[13px] font-semibold transition-colors scale-y-90 flex tracking-widest"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.name}

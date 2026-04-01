@@ -56,7 +56,7 @@ useEffect(() => {
       isScrolled ? "py-3" : "py-5"
     } px-4 lg:px-12 xl:px-24`}>
         <div className="flex-1" /> 
-        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-95 mx-85"><h1>
+        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-90 mx-85"><h1>
           RUHAVA
         </h1></Link>
          <div className="flex items-center justify-center gap-3 lg:gap-5 flex-1">
@@ -96,7 +96,7 @@ useEffect(() => {
             <Link
               key={item.href}
               href={item.href}
-              className={`whitespace-nowrap text-xs px-1 lg:px-10 lg:text-[12.5px] font-medium tracking-widest scale-y-95 
+              className={`whitespace-nowrap text-xs px-1 lg:px-10 lg:text-[12.5px] font-medium tracking-widest scale-y-90 
               ${
                 item.href === "ABOUT RUHAVA" ? "pl-3 lg:pl-8" : ""
               } 

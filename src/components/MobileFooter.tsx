@@ -6,14 +6,14 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal block md:hidden">
       
-    <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-95 py-15 text-ivory">
+    <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-90 py-15 text-ivory">
           RUHAVA
     </h1>
 
     <div className='mt-0'>
           
           <nav className='mb-10 mx-5'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5'>
             EXPLORE RUHAVA
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
@@ -39,7 +39,7 @@ export default function Footer() {
           </nav>
 
           <nav className='mb-10 mx-5'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             ONLINE SERVICES
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
@@ -62,7 +62,7 @@ export default function Footer() {
           </nav>
 
           <nav className='mb-10 mx-5'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             Boutique SERVICES
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
@@ -76,7 +76,7 @@ export default function Footer() {
           </nav>
 
           <nav className='mb-14 mx-5'>
-          <h2 className='text-ivory scale-y-95 font-larken tracking-widest text-[12.5px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             The House of Ruhava
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">

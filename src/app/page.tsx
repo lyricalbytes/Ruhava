@@ -41,10 +41,10 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
         
 
         <div className="relative z-10 flex flex-col items-center w-full lg:pt-[49vh] lg:pb-[9vh] pt-[52vh] pb-[6vh] ">
-          <span className="text-xs tracking-widest text-ivory mb-0.5 font-normal uppercase scale-y-95 font-lato">
+          <span className="text-xs tracking-widest text-ivory mb-0.5 font-normal uppercase scale-y-90 font-lato">
             A Ruhava Creation
           </span>
-          <h1 className="text-3xl lg:text-4xl md:text-3xl sm:text-2xl font-larken font-normal tracking-wider text-ivory mb-3 text-center leading-tight drop-shadow-lg scale-y-95">
+          <h1 className="text-3xl lg:text-4xl md:text-3xl sm:text-2xl font-larken font-normal tracking-wider text-ivory mb-3 text-center leading-tight drop-shadow-lg scale-y-90">
             The First Soul
             <br />
            {/* <span className="block text-sm md:text-sm font-normal mt-2">
@@ -52,7 +52,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
               Fifty Bottles prepared by hand.
             </span> */}
           </h1>
-           <button className="bg-ivory text-charcoal px-6 py-4 font-medium hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wider scale-y-95 font-lato">
+           <button className="bg-ivory text-charcoal px-6 py-4 font-medium hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wider scale-y-90 font-lato">
             SEE MORE
           </button>
         </div>

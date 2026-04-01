@@ -29,7 +29,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   <div className="z-20 bg-ivory">
       <div className="px-6 md:px-20 lg:px-32 py-16 flex flex-col md:flex-row gap-10 lg:my-17">
       <Image
-      src="/assets/thefirstsoul14.webp"
+      src="/assets/thefirstsoul15.png"
       width={500}
       height={500}
       alt="The First Soul"
@@ -37,24 +37,24 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
       />
       <div className="w-full max-w-md mx-auto lg:px-7">
         <div className="lg:text-left text-center">
-        <h1 className="font-larken tracking-wider text-[25px] text-charcoal scale-y-95">
+        <h1 className="font-larken tracking-wider text-[25px] text-charcoal scale-y-90">
           The First Soul
         </h1>
         <hr className="mt-0.5 border-none h-1 bg-charcoal" />
         
-        <p className="mt-3 font-thin font-lato scale-y-95 text-[14.5px]">
+        <p className="mt-3 font-thin font-lato  text-[14.5px]">
           EAU DE PARFUM SPRAY
         </p>
-        <button className="text-sm mt-0.5 font-thin font-lato underline underline-offset-5 cursor-pointer scale-y-95">
+        <button className="text-sm mt-0.5 font-thin font-lato underline underline-offset-5 cursor-pointer ">
           More details
         </button>
-        <p className="text-[14.5px] text-grey mt-3 scale-y-95">
+        <p className="text-[14.5px] text-grey mt-3 ">
           Bottle 04 / 50
         </p>
         </div>
         <div className="flex justify-between items-center mt-5">
-          <p className="scale-y-95 font-semibold">
-          ₹ 500<span className="text-grey">*</span>
+          <p className="scale-y-90 font-semibold font-lato tracking-widest">
+          ₹ 700<span className="text-grey">*</span>
           </p>
           <button
             className="cursor-pointer"
@@ -64,15 +64,15 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
           </button>
         </div>
         <hr className="mt-5 border-none py-[0.2px] bg-grey px-10 " />
-        <p className="mt-3 tracking-wider font-lato text-[12px] font-semibold scale-y-95">
+        <p className="mt-3 tracking-wider font-lato text-[12px] font-semibold scale-y-90">
           1 SIZE AVAILABLE
         </p>
-        <p className="text-[14px] font-lato mt-3.5 scale-y-95 font-thin tracking-wide">
-          10 ml
+        <p className="text-[14px] font-lato mt-3.5 font-thin tracking-wide">
+          30 ml
         </p>
         <button
         onClick={() => setIsOpen(true)}
-        className="bg-charcoal text-ivory w-full py-4 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-95 font-lato mt-5  hover:bg-grey transition ease-in "
+        className="bg-charcoal text-ivory w-full py-4 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-90 font-lato mt-5  hover:bg-grey transition ease-in"
         >
         RESERVE YOUR BOTTLE
         </button>
