@@ -10,6 +10,7 @@ import products from "@/data/products";
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import ContactWidgetMobile from "@/components/ContactWidgetMobile";
 
 
 export default function Home() {
@@ -23,12 +24,15 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   return (
     <main className="bg-ivory text-charcoal font-lato min-h-screen flex flex-col">
       <DesktopHeader />
+      
       <MobileHeader />
-
+      
+    
       <div className="grow bg-ivory relative z-20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
       <Link href="reserve" passHref>
+      
       <section
-        className=" flex items-start justify-center bg-center bg-cover bg-no-repeat cursor-pointer h-[610px] relative overflow-hidden">
+        className=" flex items-start justify-center bg-center bg-cover bg-no-repeat cursor-pointer min-h-[70vh] relative overflow-hidden">
 
           <motion.div 
     style={{ 
@@ -58,7 +62,17 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
         </div>
       </section>
       </Link>
+      
       </div>
+
+      
+      <ContactWidget />
+
+      <ContactWidgetMobile />
+      
+
+      
+      
 
     
 
@@ -86,13 +100,23 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
       */}
 
       <div className=""></div>
+        
 
-      <ContactWidget />
+      
+      
+
+      
+
+      <div className="z-40">
+      <MobileFooter />
+      </div>
 
       <footer className="sticky bottom-0 left-0 w-full z-10">
       <DesktopFooter />
+      
       </footer>
-      <MobileFooter />
+      
+      
       
 
     </main>

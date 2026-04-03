@@ -9,6 +9,7 @@ import { Span } from "next/dist/trace";
 import { Search, User, Star, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import ContactWidgetMobile from "@/components/ContactWidgetMobile";
 
 
 export default function Reserve() {
@@ -29,7 +30,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   <div className="z-20 bg-ivory">
       <div className="px-6 md:px-20 lg:px-32 py-16 flex flex-col md:flex-row gap-10 lg:my-17">
       <Image
-      src="/assets/thefirstsoul15.png"
+      src="/assets/thefirstsoul16.png"
       width={500}
       height={500}
       alt="The First Soul"
@@ -42,7 +43,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
         </h1>
         <hr className="mt-0.5 border-none h-1 bg-charcoal" />
         
-        <p className="mt-3 font-thin font-lato  text-[14.5px]">
+        <p className="mt-3 font-thin font-lato text-[14.5px]">
           EAU DE PARFUM SPRAY
         </p>
         <button className="text-sm mt-0.5 font-thin font-lato underline underline-offset-5 cursor-pointer ">
@@ -72,19 +73,23 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
         </p>
         <button
         onClick={() => setIsOpen(true)}
-        className="bg-charcoal text-ivory w-full py-4 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-90 font-lato mt-5  hover:bg-grey transition ease-in"
+        className="bg-charcoal text-ivory w-full py-4 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-90 font-lato mt-5  hover:bg-grey transition ease-in uppercase"
         >
-        RESERVE YOUR BOTTLE
+        ACQUIRE Your Bottle
         </button>
         <div className="scale-y-95 text-grey font-light text-[14px] mt-3.5">
           *MRP (inclusive of all taxes). <span className="underline underline-offset-5 decoration-charcoal cursor-pointer scale-y-95  text-grey font-light text-[14px]">More information</span>
         </div>
         <div className="mt-4.5 underline underline-offset-5  decoration-charcoal cursor-pointer scale-y-95 font-light text-[14.5px] text-charcoal">
-          Client reviews
+          Founder's Note
         </div>
       </div>
       </div>
+      
       </div>
+      
+      <ContactWidget />
+      <ContactWidgetMobile />
   
   
      <AnimatePresence>
@@ -111,10 +116,10 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
           <span className="text-xl font-light">✕</span>
         </button>
 
-        <h2 className="font-larken text-[20px] lg:text-[22px] mb-2 tracking-widest text-charcoal scale-y-95 uppercase">
+        <h2 className="font-larken text-[20px] lg:text-[22px] mb-2 tracking-widest text-charcoal scale-y-90 uppercase">
           Reserve a Creation
         </h2>
-        <p className="text-[14px] lg:text-[14px] text-grey font-lato mb-12 scale-y-95">
+        <p className="text-[14px] lg:text-[14px] text-grey font-lato mb-12">
           Current Drop: The First Soul
         </p>
 
@@ -159,9 +164,9 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
 
           <button
             type="submit"
-            className="bg-charcoal text-ivory py-5 mt-4 text-[11px] tracking-[0.15em] uppercase hover:bg-black transition-all duration-500 shadow-lg group flex items-center justify-center gap-3 cursor-pointer font-lato"
+            className="bg-charcoal text-ivory py-5 mt-4 text-[11px] tracking-[0.15em] uppercase hover:bg-black transition-all duration-500 shadow-lg group flex items-center justify-center gap-3 cursor-pointer font-lato scale-y-90"
           >
-            <span>Request Reservation</span>
+            <span>Request Allocation</span>
           </button>
         </form>
       </motion.div>
@@ -169,7 +174,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   )}
 </AnimatePresence>
 
-     <ContactWidget />
+     
 
       <footer className="sticky bottom-0 left-0 w-full z-10">
       <DesktopFooter />

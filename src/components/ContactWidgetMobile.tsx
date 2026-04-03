@@ -3,17 +3,76 @@ import { faCheck, faCoffee, faLocationCrosshairs, faMagnifyingGlass, faSearch, f
 import { faFacebook, faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { motion } from "framer-motion";
 import { div } from 'framer-motion/client';
-import { LocateFixed, Search } from 'lucide-react';
+import { ChevronUp, LocateFixed, Search } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import Link from 'next/link';
 
+interface AccordionProps {
+  title: string;
+  children: React.ReactNode;
+}
 
-export default function ContactWidget() {
+const AccordionItem = ({ title, children }: AccordionProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className='bg-ivory py-19 z-50 hidden md:block'>
+    <div className="border-b border-grey/20 mx-5">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex justify-between items-center py-6 cursor-pointer"
+      >
+        <span className="font-larken tracking-widest text-[13px] uppercase text-charcoal scale-y-90 py-0.5 ">{title}</span>
+        <ChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} size={16}/>
+      </button>
+      {isOpen && <div className=" pb-6 font-lato text-sm text-grey">{children}</div>}
+    </div>
+  );
+};
 
-      <div className='flex'>
-      <nav className='ml-30'>
+const AccordionItem2 = ({ title, children }: AccordionProps) => {
+  const [isClosed, setIsOpen] = useState(true);
+  return (
+    <div className=" mx-5">
+      <button 
+        onClick={() => setIsOpen(!isClosed)}
+        className="w-full flex justify-between items-center py-6 cursor-pointer"
+      >
+        <span className="font-larken tracking-widest text-[13px] uppercase text-charcoal scale-y-90 py-0.5 ">{title}</span>
+        <ChevronDown className={`transition-transform ${isClosed ? 'rotate-180' : ''}`} size={16}/>
+      </button>
+      {isClosed && <div className=" pb-6 font-lato text-sm text-grey">{children}</div>}
+    </div>
+  );
+};
+
+
+export default function ContactWidgetMobile() {
+  return (
+      
+
+    <div className='bg-ivory py-15 z-40 block md:hidden lg:hidden'>
+
+      {/*  <AccordionItem title="Contact an Advisor">
+        <p>Monday - Sunday, 10 a.m. - 8 p.m.</p>
+        <a href="mailto:ruhava.official@gmail.com" className="underline">Email Us</a>
+      */}
+
+      <nav className=''>
+        <AccordionItem title="Private Correspondence">
+            <p className='space-x-4 text-grey font-lato text-[14px]'>
+              Please contact RUHAVA Client Care Department on <br />
+              Monday - Sunday, 10 a.m. - 8 p.m. (except National <br />
+              Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>ruhava.official@gmail.com</a>
+            </p>
+        </AccordionItem>
+          </nav>
+
+    
+      <div className=''>
+        {/*
+      <nav className='ml-5 mb-10'>
           <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
-            Private Correspondence
+            Contact an Advisor
           </h2>
             <p className='space-x-4 text-grey font-lato text-[14px]'>
               Please contact RUHAVA Client Care Department on <br />
@@ -21,14 +80,17 @@ export default function ContactWidget() {
               Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>ruhava.official@gmail.com</a>
             </p>
           </nav>
+          
 
-          <nav className='ml-14 mx-2'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
-            Find a Store
-          </h2>
+          <hr className='bg-grey border-none mx-5 my-5 py-[0.2px]'/>
+          */}
+
+          <nav className=''>
+          <AccordionItem title="Find a Store">
               <p className='space-x-4 text-grey font-lato text-[14px]'>
                 Enter a location to find the closest RUHAVA stores
               </p>
+            
 
               <div className='mt-7 flex'>
                 <input type="hidden" name="access_key" value="YOUR_KEY_HERE" />
@@ -65,21 +127,24 @@ export default function ContactWidget() {
               <div className='inset-0 flex'><a href="/" className='text-charcoal text-[14px] mt-2'><LocateFixed size={18} strokeWidth={1.5} /></a></div>
               
               </div>
+              </AccordionItem>
             
           </nav>
 
-              
+          {/*
+          <hr className='bg-grey border-none mx-5 my-5 py-[0.2px]'/>
+          */}
 
-          <nav className='ml-10 mx-2'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
-            The Inner Circle
-          </h2>
+          <nav className=''>
+            <AccordionItem2 title="The Inner Circle"> 
+          
               <p className='space-x-4 text-grey font-lato text-[14px]'>
                 Avenue of Information from RUHAVA
               </p>
               <button className=' text-charcoal font-lato font-thin text-[14px] underline underline-offset-4 mt-3 cursor-pointer hover:decoration-0'>
                 Request Correspondence
               </button>
+            </AccordionItem2>
           </nav>
           </div>
 

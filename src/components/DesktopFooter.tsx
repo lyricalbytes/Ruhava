@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
-import { faFacebook, faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faFacebookF, faInstagram, faYoutube, faLinkedin, faXTwitter, faSnapchat, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { motion } from "framer-motion";
 
 
@@ -35,26 +35,25 @@ export default function Footer() {
               <li className='py-0.5'>
                 <a href="/reserve" className="hover:underline">Reserve</a>
               </li>
-              <li className='py-0.5'>
-                <a href="/sitemap" className="hover:underline">Sitemap</a>
-              </li>
+              
             </ul>
           </nav>
 
           <nav className='ml-30 mb-15 mx-13'>
           <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
-            ONLINE SERVICES
+            Client Concierge
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
               <li className='py-0.5'>
-                <a href="/privacy-policy" className="hover:underline">Payment Methods</a>
+                <a href="/privacy-policy" className="hover:underline">Secure Transactions</a>
               </li>
               <li className='py-0.5'>
-                <a href="/terms-of-service" className="hover:underline">Shipping Options</a>
+                <a href="/terms-of-service" className="hover:underline">Complimentary Delivery</a>
               </li>
-               <li className='py-0.5'>
-                <a href="/terms-of-service" className="hover:underline">My Account</a>
+              <li className='py-0.5'>
+                <a href="/terms-of-service" className="hover:underline">Track Reservation</a>
               </li>
+               
               <li className='py-0.5'>
                 <a href="/contact" className="hover:underline">Returns</a>
               </li>
@@ -66,7 +65,7 @@ export default function Footer() {
 
           <nav className='ml-30 mb-15 mx-13'>
           <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
-            Boutique SERVICES
+            Private Appointments
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
               <li className='py-0.5'>
@@ -83,27 +82,20 @@ export default function Footer() {
             The House of Ruhava
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px]">
+              
               <li className='py-0.5'>
-                <a href="/" className="hover:underline">Careers</a>
-              </li>
-              <li className='py-0.5'>
-                <a href="/" className="hover:underline">Legal Statement</a>
+                <a href="/" className="hover:underline">Terms of Craft</a>
               </li>
               <li className='py-0.5'>
                 <a href="/" className="hover:underline">Privacy Policy</a>
               </li>
-              <li className='py-0.5'>
-                <a href="/" className="hover:underline">Report to Society</a>
-              </li>
-              <li className='py-0.5'>
-                <a href="/" className="hover:underline">Fighting Counterfeits</a>
-              </li>
+              
             </ul>
           </nav>
 
           </div>
 
-          <hr className='bg-grey border-none mx-30 my-5 py-[0.2px]' />
+          <hr className='bg-grey/20 mx-30 my-5 py-[0.5px]' />
         
 
       <div className='flex py-3'>
@@ -122,10 +114,15 @@ export default function Footer() {
         </a>
       </div> */}
 
-      <div className='ml-196 mr-30 flex'>
-      <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[12px] px-3'><FontAwesomeIcon icon={faInstagram} /></a>
-      <a href="/" className='text-grey text-[11px] px-3'><FontAwesomeIcon icon={faFacebookF} /></a>
-      <a href="/" className='text-grey text-[12px] px-3'><FontAwesomeIcon icon={faYoutube} /></a>
+      <div className='ml-195 mr-30 flex'>
+      <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[13px] px-2'>Follow the House</a>
+      {/* <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[12px] px-3'><FontAwesomeIcon icon={faInstagram} /></a> */}
+      {/* <a href="/" className='text-grey text-[11px] px-3'><FontAwesomeIcon icon={faFacebookF} /></a>
+      <a href="/" className='text-grey text-[12px] px-3'><FontAwesomeIcon icon={faYoutube} /></a> */}
+      {/* <a href="/" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faLinkedin} /></a> */}
+      {/* <a href="/" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faXTwitter} /></a>
+      <a href="/" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faSnapchat} /></a>
+      <a href="/" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faPinterest} /></a> */}
       </div>
       </div>
       <div className='py-2'></div>

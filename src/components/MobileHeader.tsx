@@ -1,11 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, Search, User, ShoppingBag, X, Handbag } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
+import { createPortal } from "react-dom";
 
 const navItems = [
   { name: "THE HOUSE", href: "/the-house" },
@@ -17,16 +18,33 @@ const navItems = [
 
 export default function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent background scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menuOpen]);
 
   return (
-    <header className=" block md:hidden sticky top-0 z-50">
+    <header className=" block md:hidden sticky top-0 z-30">
       <div className="bg-charcoal pb-2"></div>
       <div className="flex items-center justify-between py-3 px-4 bg-ivory">
         <div className="flex items-center gap-4">
+          {/* CRITICAL: Ensure this button has no lower z-index parents blocking it */}
           <button
-            className=" cursor-pointer scale-y-80"
-            aria-label="Menu"
-            onClick={() => setMenuOpen(true)}
+            className="p-2 -ml-2 cursor-pointer"
+            onClick={() => {
+              console.log("Menu clicked"); // Test if click is registering
+              setMenuOpen(true);
+            }}
           >
             <Menu size={19} strokeWidth={1.5}/>
           </button>
@@ -57,65 +75,60 @@ export default function MobileHeader() {
           </button>  
         </div>
       </div>
+      
 
-      <AnimatePresence>
-      {menuOpen && (
-        <div className="fixed inset-0 z-50 flex ">
-          <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={() => setMenuOpen(false)}
-        className="absolute inset-0  bg-black/60"
-      />
-          
-          <motion.div
-        initial={{ x: "-100%" }} // Starts off-screen to the left
-        animate={{ x: 0 }}       // Slides in to view
-        exit={{ x: "-100%" }}    // Slides back out
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="relative bg-ivory w-4/5 max-w-xs h-full flex flex-col p-6 shadow-xl"
-      >
-            <div className="flex items-center justify-between mb-8">
-             <span className="font-larken text-xl">{/*Menu*/}</span> 
-              <button
-                className=" cursor-pointer "
-                aria-label="Close menu"
+     {/* PORTAL LOGIC */}
+      {mounted && typeof window !== "undefined" && createPortal(
+        <AnimatePresence>
+          {menuOpen && (
+            <div className="fixed inset-0 flex" style={{ zIndex: 9999 }}>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 onClick={() => setMenuOpen(false)}
-              >
-                <X size={22} strokeWidth={1.5}/>
-              </button>
-            </div>
-            <nav className="flex flex-col gap-5 flex-1">
-              {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-                  className="text-charcoal text-[13px] font-semibold transition-colors scale-y-90 flex tracking-widest"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.name}
-                  <div className="mx-auto mr-0.5"><FontAwesomeIcon icon={faAngleRight} /></div>
-                
-            </Link>
-          ))}
+                className="absolute inset-0 bg-black/60 "
+              />
               
-              <div className="flex-1" />
-              {/* <a
-                href="#"
-                className="text-charcoal text-base font-semibold hover:text-gold transition-colors mt-auto pt-8 border-t border-gold"
-                onClick={() => setMenuOpen(false)}
+              {/* Slide-out Menu */}
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="relative bg-ivory w-4/5 max-w-xs h-full flex flex-col p-5 shadow-2xl"
               >
-                ABOUT RUHAVA
-              </a> */}
-            </nav>
-            </motion.div>
-          
+                <div className="flex items-center justify-between mb-4">
+                 {/* <span className="font-larken tracking-widest text-sm">MAISON RUHAVA</span> */}
+                  <span className="font-larken tracking-widest text-sm"></span> 
+                  <button
+                    className="p-2 -mr-2 cursor-pointer"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <X size={22} strokeWidth={1.5}/>
+                  </button>
+                </div>
 
-          <div className="flex-1" onClick={() => setMenuOpen(false)} />
-        </div>
-      )} 
-      </AnimatePresence>
+                <nav className="flex flex-col gap-5">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-charcoal text-[13px] font-medium scale-y-90 flex justify-between items-center tracking-widest"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.name}
+                      <FontAwesomeIcon icon={faAngleRight} className="text-[11px] text-charcoal" />
+                    </Link>
+                  ))}
+                </nav>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
       
     </header>
   );
