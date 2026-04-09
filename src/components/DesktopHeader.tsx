@@ -8,9 +8,9 @@ export default function DesktopHeader() {
   const navItems = [
   { name: "THE HOUSE", href: "/the-house" },
   { name: "THE CREATION", href: "/the-creation" },
-  { name: "FOUNDER", href: "/founder" },
-  { name: "JOURNAL", href: "/journal" },
-  { name: "RESERVE", href: "/reserve" },
+  { name: "THE FOUNDER", href: "/founder" },
+  { name: "THE JOURNAL", href: "/journal" },
+  { name: "THE RESERVE", href: "/reserve" },
 ];
 
 // Inside your DesktopHeader component:
@@ -73,7 +73,7 @@ useEffect(() => {
             <User size={18} strokeWidth={1.5} />
           </button>
           <button
-            className="cursor-pointer"
+            className="cursor-pointer hidden"
             aria-label="Wishlist"
           >
             <Star size={18} strokeWidth={1.5} />

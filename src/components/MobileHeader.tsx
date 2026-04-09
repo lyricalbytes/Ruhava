@@ -11,9 +11,9 @@ import { createPortal } from "react-dom";
 const navItems = [
   { name: "THE HOUSE", href: "/the-house" },
   { name: "THE CREATION", href: "/the-creation" },
-  { name: "FOUNDER", href: "/founder" },
-  { name: "JOURNAL", href: "/journal" },
-  { name: "RESERVE", href: "/reserve" },
+  { name: "THE FOUNDER", href: "/founder" },
+  { name: "THE JOURNAL", href: "/journal" },
+  { name: "THE RESERVE", href: "/reserve" },
 ];
 
 export default function MobileHeader() {

@@ -8,20 +8,21 @@ import { LocateFixed, Search } from 'lucide-react';
 
 export default function ContactWidget() {
   return (
-    <div className='bg-ivory py-19 z-50 hidden md:block'>
+    <div className='bg-ivory py-20 z-50 hidden md:block'>
 
       <div className='flex'>
       <nav className='ml-30'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
             Private Correspondence
           </h2>
-            <p className='space-x-4 text-grey font-lato text-[14px]'>
+            <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
               Please contact RUHAVA Client Care Department on <br />
               Monday - Sunday, 10 a.m. - 8 p.m. (except National <br />
               Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>ruhava.official@gmail.com</a>
             </p>
           </nav>
 
+          {/*
           <nav className='ml-14 mx-2'>
           <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
             Find a Store
@@ -33,7 +34,7 @@ export default function ContactWidget() {
               <div className='mt-7 flex'>
                 <input type="hidden" name="access_key" value="YOUR_KEY_HERE" />
           
-          {/* Floating Label Input Field */}
+          
           {[
             { label: "City or zip code", name: "city", type: "text" },
           ].map((field) => (
@@ -67,17 +68,31 @@ export default function ContactWidget() {
               </div>
             
           </nav>
+          */}
 
+          <nav className='ml-32 mx-2'>
+          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
+            Current Allocation
+          </h2>
+              <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
+                The First Soul is currently available exclusively <br />
+                through our digital atelier. Each flacon is hand- <br />
+                filled and numbered in our Gwalior studio.
+              </p>
+
+             
+            
+          </nav>
               
 
-          <nav className='ml-10 mx-2'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase'>
+          <nav className='ml-32 mx-2'>
+          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
             The Inner Circle
           </h2>
-              <p className='space-x-4 text-grey font-lato text-[14px]'>
+              <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
                 Avenue of Information from RUHAVA
               </p>
-              <button className=' text-charcoal font-lato font-thin text-[14px] underline underline-offset-4 mt-3 cursor-pointer hover:decoration-0'>
+              <button className=' text-grey font-lato font-thin text-[14px] underline underline-offset-4 mt-3 cursor-pointer hover:decoration-0'>
                 Request Correspondence
               </button>
           </nav>

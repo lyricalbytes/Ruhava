@@ -59,7 +59,7 @@ export default function ContactWidgetMobile() {
 
       <nav className=''>
         <AccordionItem title="Private Correspondence">
-            <p className='space-x-4 text-grey font-lato text-[14px]'>
+            <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
               Please contact RUHAVA Client Care Department on <br />
               Monday - Sunday, 10 a.m. - 8 p.m. (except National <br />
               Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>ruhava.official@gmail.com</a>
@@ -85,6 +85,7 @@ export default function ContactWidgetMobile() {
           <hr className='bg-grey border-none mx-5 my-5 py-[0.2px]'/>
           */}
 
+        {/*
           <nav className=''>
           <AccordionItem title="Find a Store">
               <p className='space-x-4 text-grey font-lato text-[14px]'>
@@ -95,7 +96,7 @@ export default function ContactWidgetMobile() {
               <div className='mt-7 flex'>
                 <input type="hidden" name="access_key" value="YOUR_KEY_HERE" />
           
-          {/* Floating Label Input Field */}
+          
           {[
             { label: "City or zip code", name: "city", type: "text" },
           ].map((field) => (
@@ -130,6 +131,22 @@ export default function ContactWidgetMobile() {
               </AccordionItem>
             
           </nav>
+          */}
+
+          <nav className=''>
+          <AccordionItem title="Current Allocation">
+              <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
+                RUHAVA creations are currently available exclusively online. 
+                The First Soul: Edition of 50. 
+                <br /><br />
+                <Link href="/reserve" className="underline underline-offset-4 hover:decoration-0">Check Availability</Link>
+              </p>
+            
+
+              
+              </AccordionItem>
+            
+          </nav>
 
           {/*
           <hr className='bg-grey border-none mx-5 my-5 py-[0.2px]'/>
@@ -138,10 +155,10 @@ export default function ContactWidgetMobile() {
           <nav className=''>
             <AccordionItem2 title="The Inner Circle"> 
           
-              <p className='space-x-4 text-grey font-lato text-[14px]'>
+              <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
                 Avenue of Information from RUHAVA
               </p>
-              <button className=' text-charcoal font-lato font-thin text-[14px] underline underline-offset-4 mt-3 cursor-pointer hover:decoration-0'>
+              <button className=' text-grey font-lato font-thin text-[14px] underline underline-offset-4 mt-3 cursor-pointer hover:decoration-0'>
                 Request Correspondence
               </button>
             </AccordionItem2>

@@ -30,7 +30,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   <div className="z-20 bg-ivory">
       <div className="px-6 md:px-20 lg:px-32 py-16 flex flex-col md:flex-row gap-10 lg:my-17">
       <Image
-      src="/assets/thefirstsoul16.png"
+      src="/assets/thefirstsoul18.png"
       width={500}
       height={500}
       alt="The First Soul"
@@ -44,7 +44,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
         <hr className="mt-0.5 border-none h-1 bg-charcoal" />
         
         <p className="mt-3 font-thin font-lato text-[14.5px]">
-          EAU DE PARFUM SPRAY
+          EXTRAIT DE PARFUM SPRAY
         </p>
         <button className="text-sm mt-0.5 font-thin font-lato underline underline-offset-5 cursor-pointer ">
           More details
@@ -55,10 +55,10 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
         </div>
         <div className="flex justify-between items-center mt-5">
           <p className="scale-y-90 font-semibold font-lato tracking-widest">
-          ₹ 700<span className="text-grey">*</span>
+          ₹ 500<span className="text-grey">*</span>
           </p>
           <button
-            className="cursor-pointer"
+            className="cursor-pointer hidden"
             aria-label=""
           >
             <Star size={15} strokeWidth={2.5} />
@@ -69,25 +69,25 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
           1 SIZE AVAILABLE
         </p>
         <p className="text-[14px] font-lato mt-3.5 font-thin tracking-wide">
-          30 ml
+          8 ml
         </p>
         <button
         onClick={() => setIsOpen(true)}
         className="bg-charcoal text-ivory w-full py-4 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-90 font-lato mt-5  hover:bg-grey transition ease-in uppercase"
         >
-        ACQUIRE Your Bottle
+        ACQUIRE Your Flacon
         </button>
         <div className="scale-y-95 text-grey font-light text-[14px] mt-3.5">
           *MRP (inclusive of all taxes). <span className="underline underline-offset-5 decoration-charcoal cursor-pointer scale-y-95  text-grey font-light text-[14px]">More information</span>
         </div>
         <div className="mt-4.5 underline underline-offset-5  decoration-charcoal cursor-pointer scale-y-95 font-light text-[14.5px] text-charcoal">
-          Founder's Note
+          Soul Note
         </div>
       </div>
       </div>
       
       </div>
-      
+
       <ContactWidget />
       <ContactWidgetMobile />
   
