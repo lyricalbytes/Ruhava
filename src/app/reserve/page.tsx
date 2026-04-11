@@ -7,9 +7,12 @@ import ContactWidget from "@/components/ContactWidgetDesktop";
 import Image from "next/image";
 import { Span } from "next/dist/trace";
 import { Search, User, Star, ShoppingBag } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import ContactWidgetMobile from "@/components/ContactWidgetMobile";
+import Lenis from 'lenis';
+
+  import { useLayoutEffect } from "react"; // Add this import
 
 
 export default function Reserve() {
@@ -23,12 +26,57 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
+
+
+
+// Inside your Reserve component in reserve.tsx
+
+useLayoutEffect(() => {
+  // 1. Force the browser to stop trying to restore scroll position
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // 2. Instant reset before the page paints
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}, []);
+
+useEffect(() => {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+  });
+
+  // 3. THE RESET: Force Lenis to the top on every mount
+  // We wrap this in a frame request to ensure the DOM is ready
+  requestAnimationFrame(() => {
+    lenis.scrollTo(0, { immediate: true });
+  });
+
+  const raf = (time: number) => {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  };
+  requestAnimationFrame(raf);
+
+  return () => {
+    lenis.destroy();
+    // Optional: Re-enable auto restoration when leaving
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'auto';
+    }
+  };
+}, []);
+
   return (
-    <main className="bg-ivory text-charcoal font-lato min-h-screen flex flex-col">
+    <main className="bg-ivory text-charcoal font-lato relative  h-[110vh] flex flex-col">
       <DesktopHeader />
       <MobileHeader />
-  <div className="z-20 bg-ivory">
-      <div className="px-6 md:px-20 lg:px-32 py-16 flex flex-col md:flex-row gap-10 lg:my-17">
+  <div className="z-20 bg-ivory relative shadow-[0_20px_50px_rgba(0,0,0,0.1)] h-[110vh]" >
+      <div id="top" className="px-6 md:px-20 lg:px-32 py-16 flex flex-col md:flex-row gap-10 lg:my-17">
       <Image
       src="/assets/thefirstsoul18.png"
       width={500}
@@ -174,12 +222,14 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   )}
 </AnimatePresence>
 
-     
+     <div className="z-100 block md:hidden">
+                 <MobileFooter />
+               </div>
 
       <footer className="sticky bottom-0 left-0 w-full z-10">
-      <DesktopFooter />
-      </footer>
-      <MobileFooter />
+  <DesktopFooter />
+  
+</footer>
 
     </main>
   );

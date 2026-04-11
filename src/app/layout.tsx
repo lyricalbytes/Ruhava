@@ -1,3 +1,5 @@
+
+
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import localFont from "next/font/local";
@@ -8,6 +10,9 @@ import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
 import { config } from "@fortawesome/fontawesome-svg-core";
 // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 config.autoAddCss = false; 
+
+import ScrollFix from "@/components/ScrollFix";
+
 
 const tenor = localFont({
   src: '../fonts/TenorSans-Regular.ttf',
@@ -37,21 +42,29 @@ export const metadata: Metadata = {
   description: "Luxury Fragrance Brand",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
+  
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${larken.variable} ${lato.variable} ${tenor.variable} antialiased`}>
+         
          {/* Wrap app with CartProvider */}
         <CartProvider>
           {children}
         </CartProvider>
+
+        <ScrollFix />
       </body>
     </html>
   );

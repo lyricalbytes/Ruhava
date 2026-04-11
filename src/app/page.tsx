@@ -21,7 +21,7 @@ const LuxuryLoader = () => (
     initial={{ opacity: 1 }}
     animate={{ opacity: 0 }}
     transition={{ duration: 1.5, delay: 2.5, ease: [0.19, 1, 0.22, 1] }}
-    className="fixed inset-0 z-[200] bg-charcoal flex flex-col items-center justify-center pointer-events-none"
+    className="fixed inset-0 z-200 bg-charcoal flex flex-col items-center justify-center pointer-events-none"
   >
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -31,7 +31,7 @@ const LuxuryLoader = () => (
     >
       RUHAVA
     </motion.div>
-    <div className="w-12 h-[1px] bg-ivory/20 overflow-hidden">
+    <div className="w-12 h-px bg-ivory/20 overflow-hidden">
       <motion.div 
         initial={{ x: "-100%" }}
         animate={{ x: "100%" }}
@@ -52,25 +52,26 @@ interface ParallaxSectionProps {
   title: React.ReactNode;
   cta: string;
   href: string;
+  scroll?: boolean; // Add this optional prop
 }
 
-const ParallaxSection = ({ image, subtitle, title, cta, href }: ParallaxSectionProps) => {
+const ParallaxSection = ({ image, subtitle, title, cta, href,scroll = true }: ParallaxSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "15%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1.3]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1.1]);
 
 const { scrollY } = useScroll();
 const footerOpacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
 const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
 
   return (
-    <div ref={sectionRef} className="relative z-20 -mt-[1px] bg-charcoal h-[78vh] w-full overflow-hidden border-b border-ivory/5">
-      <Link href={href} passHref>
+    <div ref={sectionRef} className="relative z-20 -mt-px bg-charcoal h-[78vh] w-full overflow-hidden border-b border-ivory/5">
+      <Link href={href} scroll={scroll} passHref>
         <section className="relative h-full w-full flex items-center justify-center cursor-pointer overflow-hidden">
           
           <motion.div
@@ -84,32 +85,32 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
           
           <div className="absolute inset-0 bg-black/20 z-0" />
 
-          <div className="relative z-10 flex flex-col items-center w-full px-10 mt-85 lg:mt-85 text-center max-w-5xl">
+          <div className="relative z-10 flex flex-col items-center w-full px-8 mt-90 lg:mt-90 text-center max-w-5xl">
             <motion.span 
-               initial={{ opacity: 0, y: 10 }}
-               whileInView={{ opacity: 0.8, y: 0 }}
-               transition={{ duration: 1.2 }}
-               viewport={{ once: true }}
+              //  initial={{ opacity: 0, y: 10 }}
+              //  whileInView={{ opacity: 0.8, y: 0 }}
+              //  transition={{ duration: 1.2 }}
+              //  viewport={{ once: true }}
                className="text-[10px] md:text-[10px] text-ivory mb-2 font-normal uppercase tracking-[0.5em] font-lato"
             >
               {subtitle}
             </motion.span>
             
             <motion.h2 
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
-               viewport={{ once: true }}
-               className="text-[32px] lg:text-[34px] font-larken font-normal  text-ivory mb-5 leading-[1.1]"
+              //  initial={{ opacity: 0, y: 30 }}
+              //  whileInView={{ opacity: 1, y: 0 }}
+              //  transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
+              //  viewport={{ once: true }}
+               className="text-[30px] lg:text-[34px] scale-y-90 font-larken font-normal  text-ivory mb-5 leading-[1.1]"
             >
               {title}
             </motion.h2>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              viewport={{ once: true }}
+              // initial={{ opacity: 0 }}
+              // whileInView={{ opacity: 1 }}
+              // transition={{ duration: 1, delay: 0.5 }}
+              // viewport={{ once: true }}
             >
               <button className="group relative border border-ivory/30 px-6 pt-2 pb-3 text-charcoal bg-ivory cursor-pointer hover:brightness-90 overflow-hidden transition-all duration-700">
                 <span className="relative z-10 text-[10px] tracking-[0.2em] font-lato uppercase group-hover:text-charcoal transition-colors duration-500 font-medium">
@@ -164,10 +165,14 @@ export default function Home() {
       
 
       {/* Cinematic Noise Layer */}
-      <div className="fixed inset-0 z-[95] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-soft-light" />
+      <div className="fixed inset-0 z-95 pointer-events-none opacity-[0.03] mix-blend-soft-light" 
+        style={{ 
+       backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
+     }}
+      />
       
       {/* 4. HEADER: Lower Z than Widgets */}
-      <header className="fixed top-0 left-0 w-full z-[100]">
+      <header className="fixed top-0 left-0 w-full z-100">
         <DesktopHeader />
         <MobileHeader />
       </header>
@@ -210,6 +215,7 @@ export default function Home() {
           title="A Legacy in Fifty Flacons."
           cta="Acquire"
           href="/reserve"
+          scroll={false} // This now works without errors
         />
         
       </div>
