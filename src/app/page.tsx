@@ -1,198 +1,250 @@
 "use client";
+
+import { useRef, useEffect, useState } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import Link from 'next/link';
+import Lenis from 'lenis';
+
 import DesktopHeader from "@/components/DesktopHeader";
 import MobileHeader from "@/components/MobileHeader";
 import DesktopFooter from "@/components/DesktopFooter";
 import MobileFooter from "@/components/MobileFooter";
 import ContactWidget from "@/components/ContactWidgetDesktop";
-import { CartProvider } from "@/context/CartContext";
-import ProductCard from "@/components/ProductCard";
-import products from "@/data/products";
-import Link from 'next/link';
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import ContactWidgetMobile from "@/components/ContactWidgetMobile";
 
+/** 
+ * 1. LUXURY PRE-LOADER
+ * Building the "Ritual" of entry.
+ */
+const LuxuryLoader = () => (
+  <motion.div 
+    initial={{ opacity: 1 }}
+    animate={{ opacity: 0 }}
+    transition={{ duration: 1.5, delay: 2.5, ease: [0.19, 1, 0.22, 1] }}
+    className="fixed inset-0 z-[200] bg-charcoal flex flex-col items-center justify-center pointer-events-none"
+  >
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="text-ivory font-larken text-3xl tracking-[0.6em] mb-4"
+    >
+      RUHAVA
+    </motion.div>
+    <div className="w-12 h-[1px] bg-ivory/20 overflow-hidden">
+      <motion.div 
+        initial={{ x: "-100%" }}
+        animate={{ x: "100%" }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        className="w-full h-full bg-ivory"
+      />
+    </div>
+  </motion.div>
+);
 
-export default function Home() {
-// Change your existing hook to this:
+/**
+ * 2. EDITORIAL PARALLAX SECTION
+ * High-definition imagery with architectural text reveals.
+ */
+interface ParallaxSectionProps {
+  image: string;
+  subtitle: string;
+  title: React.ReactNode;
+  cta: string;
+  href: string;
+}
+
+const ParallaxSection = ({ image, subtitle, title, cta, href }: ParallaxSectionProps) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "15%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1.3]);
+
 const { scrollY } = useScroll();
-const { scrollYProgress } = useScroll(); // Use progress for the footer fade
-const y = useTransform(scrollY, [0, 1600], [-14, 50]); // Moves image down as you scroll
 const footerOpacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
 const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
 
   return (
-    <main className="bg-ivory text-charcoal font-lato min-h-screen flex flex-col">
-      <DesktopHeader />
-      
-      <MobileHeader />
-      
-      <div className="grow bg-ivory relative z-20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-      <Link href="reserve" passHref>
-      
-      <section
-        className=" flex items-start justify-center bg-center bg-cover bg-no-repeat cursor-pointer min-h-[70vh] relative overflow-hidden">
+    <div ref={sectionRef} className="relative z-20 -mt-[1px] bg-charcoal h-[78vh] w-full overflow-hidden border-b border-ivory/5">
+      <Link href={href} passHref>
+        <section className="relative h-full w-full flex items-center justify-center cursor-pointer overflow-hidden">
+          
+          <motion.div
+            style={{ 
+              backgroundImage: `url(${image})`,
+              y: y,
+              scale: scale,
+            }}
+            className="absolute inset-0 bg-center bg-cover bg-no-repeat will-change-transform"
+          />
+          
+          <div className="absolute inset-0 bg-black/20 z-0" />
 
-          <motion.div 
-    style={{ 
-      backgroundImage: "url('/assets/h5.jpeg')",
-      y: y // Using the y transform you already defined
-    }}
-    className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-111" // scale-110 prevents white edges
-  />
-      
-        
+          <div className="relative z-10 flex flex-col items-center w-full px-10 mt-85 lg:mt-85 text-center max-w-5xl">
+            <motion.span 
+               initial={{ opacity: 0, y: 10 }}
+               whileInView={{ opacity: 0.8, y: 0 }}
+               transition={{ duration: 1.2 }}
+               viewport={{ once: true }}
+               className="text-[10px] md:text-[10px] text-ivory mb-2 font-normal uppercase tracking-[0.5em] font-lato"
+            >
+              {subtitle}
+            </motion.span>
+            
+            <motion.h2 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
+               viewport={{ once: true }}
+               className="text-[32px] lg:text-[34px] font-larken font-normal  text-ivory mb-5 leading-[1.1]"
+            >
+              {title}
+            </motion.h2>
 
-        <div className="relative z-10 flex flex-col items-center w-full lg:pt-[49vh] lg:pb-[9vh] pt-[52vh] pb-[6vh] mx-10">
-          <span className="text-xs tracking-widest text-ivory mb-0.5 font-normal uppercase scale-y-90 font-lato">
-            RUHAVA
-          </span>
-          <h1 className="text-3xl lg:text-4xl md:text-3xl sm:text-2xl font-larken font-normal tracking-wider text-ivory mb-3 text-center leading-tight drop-shadow-lg scale-y-90">
-            A House of Scent and Memory
-            <br />
-           {/* <span className="block text-sm md:text-sm font-normal mt-2">
-              The first creation of Ruhava. <br/>
-              Fifty Bottles prepared by hand.
-            </span> */}
-          </h1>
-           <button className="bg-ivory text-charcoal px-6 py-4 font-medium hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wider scale-y-90 font-lato">
-            SEE THE FIRST CREATION
-          </button>
-        </div>
-      </section>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <button className="group relative border border-ivory/30 px-6 pt-2 pb-3 text-charcoal bg-ivory cursor-pointer hover:brightness-90 overflow-hidden transition-all duration-700">
+                <span className="relative z-10 text-[10px] tracking-[0.2em] font-lato uppercase group-hover:text-charcoal transition-colors duration-500 font-medium">
+                  {cta}
+                </span>
+                
+              </button>
+            </motion.div>
+          </div>
+        </section>
       </Link>
-      
-      </div>
+    </div>
+  );
+};
+
+export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const mainContentRef = useRef<HTMLDivElement>(null);
+
+  // 3. FOOTER REVEAL LOGIC
+  const { scrollYProgress: footerScrollProgress } = useScroll({
+    target: mainContentRef,
+    offset: ["end end", "end start"]
+  });
+
+  const footerOpacity = useTransform(footerScrollProgress, [0.2, 1], [0, 1]);
+  const footerBlur = useTransform(footerScrollProgress, [0.2, 1], ["10px", "0px"]);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.8,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
     
-      <div className="grow bg-ivory relative z-20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-      <Link href="reserve" passHref>
-      
-      <section
-        className=" flex items-start justify-center bg-center bg-cover bg-no-repeat cursor-pointer min-h-[70vh] relative overflow-hidden">
+    const timer = setTimeout(() => setLoading(false), 3500);
+    return () => {
+      lenis.destroy();
+      clearTimeout(timer);
+    };
+  }, []);
 
-          <motion.div 
-    style={{ 
-      backgroundImage: "url('/assets/c3.jpeg')",
-      y: y // Using the y transform you already defined
-    }}
-    className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-121" // scale-110 prevents white edges
-  />
+  return (
+    <main className="bg-charcoal font-lato min-h-screen flex flex-col selection:bg-ivory selection:text-charcoal overflow-x-hidden relative">
       
+
+      {/* Cinematic Noise Layer */}
+      <div className="fixed inset-0 z-[95] pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-soft-light" />
+      
+      {/* 4. HEADER: Lower Z than Widgets */}
+      <header className="fixed top-0 left-0 w-full z-[100]">
+        <DesktopHeader />
+        <MobileHeader />
+      </header>
+
+      
+
+      {/* 6. SCROLLING CONTENT: Slides up over the Footer */}
+      <div ref={mainContentRef} className="text-ivory flex flex-col relative z-30 bg-charcoal shadow-[0_50px_100px_rgba(0,0,0,0.5)] pt-16 lg:pt-24">
         
 
-        <div className="relative z-10 flex flex-col items-center w-full lg:pt-[49vh] lg:pb-[9vh] pt-[52vh] pb-[6vh] ">
-          <span className="text-xs tracking-widest text-ivory mb-0.5 font-normal uppercase scale-y-90 font-lato">
-            A Ruhava Creation
-          </span>
-          <h1 className="text-3xl lg:text-4xl md:text-3xl sm:text-2xl font-larken font-normal tracking-wider text-ivory mb-3 text-center leading-tight drop-shadow-lg scale-y-90">
-            The First Soul
-            <br />
-           {/* <span className="block text-sm md:text-sm font-normal mt-2">
-              The first creation of Ruhava. <br/>
-              Fifty Bottles prepared by hand.
-            </span> */}
-          </h1>
-           <button className="bg-ivory text-charcoal px-6 py-4 font-medium hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wider scale-y-90 font-lato">
-            DISCOVER THE CREATION
-          </button>
+        <ParallaxSection 
+          image="/assets/c3.jpeg"
+          subtitle="Genesis"
+          title="The First Soul"
+          cta="Discover"
+          href="/the-creation"
+        />
+
+        <ParallaxSection 
+          image="/assets/h5.jpeg"
+          subtitle="The Alchemist’s House"
+          title={<>A House of Scent <br className="hidden lg:hidden" /> and Memory</>}
+          cta="Explore"
+          href="/the-house"
+        />
+
+
+
+        <ParallaxSection 
+          image="/assets/p2.jpeg"
+          subtitle="The Philosophy"
+          title={<>Where memory becomes scent. <br className="hidden lg:block" /> </>}
+          cta="See More"
+          href="/journal"
+        />
+
+        <ParallaxSection 
+          image="/assets/s2.jpeg"
+          subtitle="The Limited Drop"
+          title="A Legacy in Fifty Flacons."
+          cta="Acquire"
+          href="/reserve"
+        />
+        
+      </div>
+
+      {/* 5. HIGHEST LAYER: Contact Widgets */}
+      
+        <div className="z-110 relative lg:mb-[80vh]">
+        <ContactWidget />
+        <ContactWidgetMobile />
         </div>
-      </section>
-      </Link>
-      
-      </div>
 
-
-      <div className="grow bg-ivory relative z-20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-      <Link href="reserve" passHref>
       
-      <section
-        className=" flex items-start justify-center bg-center bg-cover bg-no-repeat cursor-pointer min-h-[70vh] relative overflow-hidden">
 
-          <motion.div 
-    style={{ 
-      backgroundImage: "url('/assets/p2.jpeg')",
-      y: y // Using the y transform you already defined
-    }}
-    className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-121" // scale-110 prevents white edges
-  />
+         <div className=""></div>
+
+         <div className="z-100 block md:hidden">
+            <MobileFooter />
+          </div>
       
+
+      {/* 7. THE SECRET: Footer pins to the bottom with a lower z-index */}
+      <footer className="fixed bottom-0 left-0 w-full z-10 h-[60vh] lg:h-[80vh] flex flex-col justify-end bg-charcoal">
+        {/* We use the motion div to apply the blur/fade effect as it's revealed */}
+        <motion.div 
+        style={{ 
+          opacity: footerOpacity, 
+          filter: `blur(${footerBlur})` 
+        }}
+      >
+        <DesktopFooter />
+
         
-
-        <div className="relative z-10 flex flex-col items-center w-full lg:pt-[49vh] lg:pb-[9vh] pt-[52vh] pb-[6vh] mx-10">
-          <span className="text-xs tracking-widest text-ivory mb-0.5 font-normal uppercase scale-y-90 font-lato">
-            Where memory becomes poetry,
-          </span>
-          <h1 className="text-3xl lg:text-4xl md:text-3xl sm:text-2xl font-larken font-normal tracking-wider text-ivory mb-3 text-center leading-tight drop-shadow-lg scale-y-90">
-            and poetry, in time, becomes scent.
-            <br />
-           {/* <span className="block text-sm md:text-sm font-normal mt-2">
-              The first creation of Ruhava. <br/>
-              Fifty Bottles prepared by hand.
-            </span> */}
-          </h1>
-           <button className="bg-ivory text-charcoal px-6 py-4 font-medium hover:bg-ivory hover:text-charcoal transition delay-100 duration-200 ease-in text-xs cursor-pointer tracking-wider scale-y-90 font-lato">
-            ENTER THE HOUSE
-          </button>
-        </div>
-      </section>
-      </Link>
-      
-      </div>
-
-      
-      <ContactWidget />
-
-      <ContactWidgetMobile />
-      
-
-      
-      
-
-    
-
-      {/* <div className="max-w-6xl mx-auto py-10">
-
-       <h1 className="text-3xl font-light tracking-tight mb-8">
-        Our Collections
-      </h1> */}
-
-      {/* Display Product Cards */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div> */}
-      
-      {/*
-    </div> */}
-
-      {/*
-      <section
-        className="relative flex items-center justify-center min-h-[80vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/bg-img-1.webp')" }}
-      ></section> 
-      */}
-
-      <div className=""></div>
         
-
-      
-      
-
-      
-
-      <div className="z-40">
-      <MobileFooter />
-      </div>
-
-      <footer className="sticky bottom-0 left-0 w-full z-10">
-      <DesktopFooter />
-      
+      </motion.div>
       </footer>
-      
-      
-      
-
     </main>
   );
 }

@@ -8,7 +8,7 @@ import { LocateFixed, Search } from 'lucide-react';
 
 export default function ContactWidget() {
   return (
-    <div className='bg-ivory py-20 z-50 hidden md:block'>
+    <div className='bg-ivory py-20 z-100 hidden md:block'>
 
       <div className='flex'>
       <nav className='ml-30'>

@@ -48,7 +48,7 @@ useEffect(() => {
 }, [lastScrollY]);
 
   return (
-    <header className={`hidden md:block bg-ivory sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
+    <header className={`hidden md:block text-charcoal bg-ivory sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
     isScrolled ? "backdrop-blur-md shadow-sm" : ""
   }`}>
       <div className="bg-charcoal pb-2"></div>
