@@ -98,7 +98,7 @@ useEffect(() => {
           More details
         </button>
         <p className="text-[14.5px] text-grey mt-3 ">
-          Bottle 04 / 50
+          Bottle 04 of 50
         </p>
         </div>
         <div className="flex justify-between items-center mt-5">

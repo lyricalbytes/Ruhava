@@ -183,13 +183,7 @@ export default function Home() {
       <div ref={mainContentRef} className="text-ivory flex flex-col relative z-30 bg-charcoal shadow-[0_50px_100px_rgba(0,0,0,0.5)] pt-16 lg:pt-24">
         
 
-        <ParallaxSection 
-          image="/assets/c3.jpeg"
-          subtitle="Genesis"
-          title="The First Soul"
-          cta="Discover"
-          href="/the-creation"
-        />
+        
 
         <ParallaxSection 
           image="/assets/h5.jpeg"
@@ -199,6 +193,13 @@ export default function Home() {
           href="/the-house"
         />
 
+        <ParallaxSection 
+          image="/assets/c3.jpeg"
+          subtitle="Genesis"
+          title="The First Soul"
+          cta="Discover"
+          href="/the-creation"
+        />
 
 
         <ParallaxSection 
