@@ -86,12 +86,12 @@ useEffect(() => {
       />
       <div className="w-full max-w-md mx-auto lg:px-7">
         <div className="lg:text-left text-center">
-        <h1 className="font-larken tracking-wider text-[25px] text-charcoal scale-y-90">
+        <h1 className="font-larken tracking-wider text-[25px] text-charcoal scale-y-85">
           The First Soul
         </h1>
         <hr className="mt-0.5 border-none h-1 bg-charcoal" />
         
-        <p className="mt-3 font-thin font-lato text-[14.5px]">
+        <p className="mt-3 font-thin font-lato text-[14.5px] opacity-90">
           EXTRAIT DE PARFUM SPRAY
         </p>
         <button className="text-sm mt-0.5 font-thin font-lato underline underline-offset-5 cursor-pointer ">
@@ -121,7 +121,7 @@ useEffect(() => {
         </p>
         <button
         onClick={() => setIsOpen(true)}
-        className="bg-charcoal text-ivory w-full py-4 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-90 font-lato mt-5  hover:bg-grey transition ease-in uppercase"
+        className="bg-charcoal text-ivory w-full py-5 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-85 font-lato mt-5  hover:bg-grey transition ease-in uppercase"
         >
         ACQUIRE Your Flacon
         </button>
@@ -164,7 +164,7 @@ useEffect(() => {
           <span className="text-xl font-light">✕</span>
         </button>
 
-        <h2 className="font-larken text-[20px] lg:text-[22px] mb-2 tracking-widest text-charcoal scale-y-90 uppercase">
+        <h2 className="font-larken text-[18px] lg:text-[20px] mb-2 tracking-widest text-charcoal scale-y-85 uppercase">
           Reserve a Creation
         </h2>
         <p className="text-[14px] lg:text-[14px] text-grey font-lato mb-12">
@@ -212,7 +212,7 @@ useEffect(() => {
 
           <button
             type="submit"
-            className="bg-charcoal text-ivory py-5 mt-4 text-[11px] tracking-[0.15em] uppercase hover:bg-black transition-all duration-500 shadow-lg group flex items-center justify-center gap-3 cursor-pointer font-lato scale-y-90"
+            className="bg-charcoal text-ivory py-6 mt-4 text-[11px] tracking-[0.15em] uppercase hover:bg-black transition-all duration-500 shadow-lg group flex items-center justify-center gap-3 cursor-pointer font-lato scale-y-85"
           >
             <span>Request Allocation</span>
           </button>

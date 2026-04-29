@@ -8,12 +8,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
 import { createPortal } from "react-dom";
 
-const navItems = [
+// const navItems = [
+//   { name: "THE HOUSE", href: "/the-house" },
+//   { name: "THE FIRST SOUL", href: "/the-creation" },
+//   // { name: "THE RESERVE", href: "/reserve" },
+//   // { name: "THE JOURNAL", href: "/journal" },
+//   { name: "THE FOUNDER", href: "/founder" },
+// ];
+
+const mainNavItems = [
   { name: "THE HOUSE", href: "/the-house" },
-  { name: "THE CREATION", href: "/the-creation" },
+  { name: "THE FIRST SOUL", href: "/the-creation" },
+];
+
+const secondaryNavItems = [
   { name: "THE FOUNDER", href: "/founder" },
-  { name: "THE JOURNAL", href: "/journal" },
-  { name: "THE RESERVE", href: "/reserve" },
 ];
 
 export default function MobileHeader() {
@@ -36,7 +45,7 @@ export default function MobileHeader() {
   return (
     <header className=" block md:hidden sticky top-0 z-30">
       <div className="bg-charcoal pb-2"></div>
-      <div className="flex items-center justify-between py-3 px-4 bg-ivory">
+      <div className="flex items-center justify-between py-2.5 px-4 bg-ivory">
         <div className="flex items-center gap-4">
           {/* CRITICAL: Ensure this button has no lower z-index parents blocking it */}
           <button
@@ -56,7 +65,7 @@ export default function MobileHeader() {
           </button> 
         </div> 
 
-        <Link href="/" className="font-larken font-normal text-[20.5px] tracking-widest scale-y-90"><h1>
+        <Link href="/" className="font-larken font-normal text-[20.5px] tracking-widest scale-y-85"><h1>
           RUHAVA
         </h1></Link>
 
@@ -110,8 +119,41 @@ export default function MobileHeader() {
                   </button>
                 </div>
 
-                <nav className="flex flex-col gap-5">
-                  {navItems.map((item) => (
+                {/* <nav className="flex flex-col gap-5"> */}
+                <nav className="flex flex-col">
+                  {/* MAIN LINKS */}
+  <div className="flex flex-col gap-5">
+    {mainNavItems.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className="text-charcoal text-[12px] font-medium flex justify-between items-center tracking-widest scale-y-85"
+        onClick={() => setMenuOpen(false)}
+      >
+        {item.name}
+        <FontAwesomeIcon icon={faAngleRight} className="text-[11px]" />
+      </Link>
+    ))}
+  </div>
+
+  {/* SPACING / DIVIDER */}
+  <div className="mt-8  border-charcoal/10 pt-6" />
+
+  {/* FOUNDER (SECONDARY) */}
+  <div className="flex flex-col">
+    {secondaryNavItems.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className="text-charcoal text-[12px] font-medium flex justify-between items-center tracking-widest scale-y-85"
+        onClick={() => setMenuOpen(false)}
+      >
+        {item.name}
+        <FontAwesomeIcon icon={faAngleRight} className="text-[10px]" />
+      </Link>
+    ))}
+  </div>
+                  {/* {navItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
@@ -121,7 +163,7 @@ export default function MobileHeader() {
                       {item.name}
                       <FontAwesomeIcon icon={faAngleRight} className="text-[11px] text-charcoal" />
                     </Link>
-                  ))}
+                  ))} */}
                 </nav>
               </motion.div>
             </div>

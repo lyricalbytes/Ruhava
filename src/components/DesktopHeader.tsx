@@ -5,12 +5,21 @@ import { useState, useEffect } from "react";
 
 
 export default function DesktopHeader() {
-  const navItems = [
+//   const navItems = [
+//   { name: "THE HOUSE", href: "/the-house" },
+//   { name: "THE FIRST SOUL", href: "/the-creation" },
+//   // { name: "THE RESERVE", href: "/reserve" },
+//   // { name: "THE JOURNAL", href: "/journal" },
+//   { name: "THE FOUNDER", href: "/founder" },
+// ];
+
+const mainNavItems = [
   { name: "THE HOUSE", href: "/the-house" },
-  { name: "THE CREATION", href: "/the-creation" },
+  { name: "THE FIRST SOUL", href: "/the-creation" },
+];
+
+const secondaryNavItems = [
   { name: "THE FOUNDER", href: "/founder" },
-  { name: "THE JOURNAL", href: "/journal" },
-  { name: "THE RESERVE", href: "/reserve" },
 ];
 
 // Inside your DesktopHeader component:
@@ -56,7 +65,7 @@ useEffect(() => {
       isScrolled ? "py-3" : "py-5"
     } px-4 lg:px-12 xl:px-24`}>
         <div className="flex-1" /> 
-        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-90 mx-85"><h1>
+        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-85 mx-85"><h1>
           RUHAVA
         </h1></Link>
          <div className="flex items-center justify-center gap-3 lg:gap-5 flex-1">
@@ -78,20 +87,50 @@ useEffect(() => {
           >
             <Star size={18} strokeWidth={1.5} />
           </button>
-          <Link href="/cart">
+          {/* <Link href="/cart">  */}
             <button
-              className="cursor-pointer mt-1.5"
+              // className="cursor-pointer mt-1.5"
+              className="cursor-pointer"
               aria-label="Shopping bag"
             >
               <Handbag size={18} strokeWidth={1.5} />
             </button>
-          </Link>
+          {/* </Link> */}
         </div> 
       </div>
-      <nav className={`flex justify-center transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] overflow-hidden ${
-      isScrolled ? "max-h-0 opacity-0 transform -translate-y-2" : "max-h-20 opacity-100 transform translate-y-0 pb-6"
-    }`}>
-        <div className="flex">
+      <nav
+  className={`relative flex items-center justify-between transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] overflow-hidden ${
+    isScrolled
+      ? "max-h-0 opacity-0 transform -translate-y-2"
+      : "max-h-20 opacity-100 transform translate-y-0 pb-6"
+  } px-4 lg:px-12 xl:px-24`}
+>
+      {/* LEFT / CENTER NAV */}
+  <div className="flex gap-6 lg:gap-10 mx-auto">
+    {mainNavItems.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className="whitespace-nowrap text-[12.5px] font-medium tracking-widest scale-y-85"
+      >
+        {item.name}
+      </Link>
+    ))}
+  </div>
+
+  {/* RIGHT (FOUNDER) */}
+  <div className="absolute right-4 lg:right-12 xl:right-24 pl-6">
+    {secondaryNavItems.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className="inline-block whitespace-nowrap text-[12.5px] font-medium tracking-widest scale-y-85"
+      >
+        {item.name}
+      </Link>
+    ))}
+  </div>
+        {/* <div className="flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -105,7 +144,7 @@ useEffect(() => {
               {item.name}
             </Link>
           ))}
-        </div>
+        </div> */}
       </nav>
       
     </header>

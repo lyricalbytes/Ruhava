@@ -62,7 +62,7 @@ const ParallaxSection = ({ image, subtitle, title, cta, href,scroll = true }: Pa
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
   const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1.1]);
 
 const { scrollY } = useScroll();
@@ -91,7 +91,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
               //  whileInView={{ opacity: 0.8, y: 0 }}
               //  transition={{ duration: 1.2 }}
               //  viewport={{ once: true }}
-               className="text-[10px] md:text-[10px] text-ivory mb-2 font-normal uppercase tracking-[0.5em] font-lato"
+               className="text-[12px] lg:text-[12.5px] md:text-[11.5px] text-ivory mb-2 font-normal uppercase tracking-[0.2em] font-lato scale-y-85"
             >
               {subtitle}
             </motion.span>
@@ -101,7 +101,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
               //  whileInView={{ opacity: 1, y: 0 }}
               //  transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
               //  viewport={{ once: true }}
-               className="text-[30px] lg:text-[34px] scale-y-90 font-larken font-normal  text-ivory mb-5 leading-[1.1]"
+               className="text-[26px] lg:text-[32px] scale-y-85 tracking-wide font-larken font-normal  text-ivory mb-5 leading-[1.1]"
             >
               {title}
             </motion.h2>
@@ -112,8 +112,8 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
               // transition={{ duration: 1, delay: 0.5 }}
               // viewport={{ once: true }}
             >
-              <button className="group relative border border-ivory/30 px-6 pt-2 pb-3 text-charcoal bg-ivory cursor-pointer hover:brightness-90 overflow-hidden transition-all duration-700">
-                <span className="relative z-10 text-[10px] tracking-[0.2em] font-lato uppercase group-hover:text-charcoal transition-colors duration-500 font-medium">
+              <button className="group relative border border-ivory/30 px-6 pt-3 pb-4 text-charcoal bg-ivory cursor-pointer hover:brightness-90 overflow-hidden transition-all duration-700 scale-y-85">
+                <span className="relative z-10 text-[12px] lg:text-[12.5px] scale-y-85 tracking-widest font-lato uppercase group-hover:text-charcoal transition-colors duration-500 font-medium">
                   {cta}
                 </span>
                 
@@ -184,6 +184,7 @@ export default function Home() {
         
 
         
+        
 
         <ParallaxSection 
           image="/assets/h5.jpeg"
@@ -201,10 +202,12 @@ export default function Home() {
           href="/the-creation"
         />
 
+        
 
-        <ParallaxSection 
+
+        {/* <ParallaxSection 
           image="/assets/p2.jpeg"
-          subtitle="The Philosophy"
+          subtitle= "The Founder"
           title={<>Where memory becomes scent. <br className="hidden lg:block" /> </>}
           cta="See More"
           href="/journal"
@@ -212,12 +215,12 @@ export default function Home() {
 
         <ParallaxSection 
           image="/assets/s2.jpeg"
-          subtitle="The Limited Drop"
+          subtitle="The Reserve"
           title="A Legacy in Fifty Flacons."
           cta="Acquire"
           href="/reserve"
-          scroll={false} // This now works without errors
-        />
+          scroll={false} 
+        /> */}
         
       </div>
 

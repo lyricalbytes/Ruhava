@@ -10,14 +10,14 @@ export default function Footer() {
     <footer className="bg-charcoal block md:hidden z-30">
 
   
-    <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-90 py-15 text-ivory">
+    <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-85 py-15 text-ivory">
           RUHAVA
     </h1>
 
     <div className='mt-0'>
           
           <nav className='mb-10 mx-5'>
-          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13px] py-0.5'>
+          <h2 className='text-ivory scale-y-85 font-larken tracking-widest text-[13px] py-0.5'>
             EXPLORE RUHAVA
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px] space-y-0.5">
@@ -30,19 +30,21 @@ export default function Footer() {
           </nav>
 
           <nav className='mb-10 mx-5'>
-          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-85 font-larken tracking-widest text-[13px] py-0.5 uppercase'>
             The Collection
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px] space-y-0.5">
             <li><Link href="/the-creation" className="hover:underline">The First Soul</Link></li>
             <li><Link href="/reserve" className="hover:underline">Request Allocation</Link></li>
-            <li><Link href="/craftsmanship" className="hover:underline">Art of the Flacon</Link></li>
-            <li><Link href="/craftsmanship" className="hover:underline">The Hurt Ones</Link></li>
+            <li><Link href="/craftsmanship" className="hover:underline">Art of Gifting</Link></li>
+            <li><Link href="/faq" className="hover:underline">Common Inquiries</Link></li>
+            {/* <li><Link href="/craftsmanship" className="hover:underline">Art of the Flacon</Link></li> */}
+            {/* <li><Link href="/craftsmanship" className="hover:underline">The Hurt Ones</Link></li> */}
             </ul>
           </nav>
 
           <nav className='mb-10 mx-5'>
-          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-85 font-larken tracking-widest text-[13px] py-0.5 uppercase'>
             Client Concierge
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px] space-y-0.5">
@@ -50,7 +52,7 @@ export default function Footer() {
             <li><Link href="/shipping" className="hover:underline">Complimentary Delivery</Link></li>
             <li><Link href="/track" className="hover:underline">Track Reservation</Link></li>
             <li><Link href="/returns" className="hover:underline">Returns & Exchanges</Link></li>
-            <li><Link href="/faq" className="hover:underline">Common Inquiries</Link></li>
+            {/* <li><Link href="/faq" className="hover:underline">Common Inquiries</Link></li> */}
             </ul>
           </nav>
 
@@ -69,7 +71,7 @@ export default function Footer() {
           </nav>
 
           <nav className='mb-14 mx-5'>
-          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13px] py-0.5 uppercase'>
+          <h2 className='text-ivory scale-y-85 font-larken tracking-widest text-[13px] py-0.5 uppercase'>
             The House of Ruhava
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px] space-y-0.5">

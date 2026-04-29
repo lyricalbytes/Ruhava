@@ -12,13 +12,13 @@ export default function ContactWidget() {
 
       <div className='flex'>
       <nav className='ml-30'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
+          <h2 className='text-charcoal scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
             Private Correspondence
           </h2>
             <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
               Please contact RUHAVA Client Care Department on <br />
               Monday - Sunday, 10 a.m. - 8 p.m. (except National <br />
-              Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>ruhava.official@gmail.com</a>
+              Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>rescuebird18@gmail.com{/*ruhava.official@gmail.com*/}</a>
             </p>
           </nav>
 
@@ -71,7 +71,7 @@ export default function ContactWidget() {
           */}
 
           <nav className='ml-32 mx-2'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
+          <h2 className='text-charcoal scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
             Current Allocation
           </h2>
               <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
@@ -86,7 +86,7 @@ export default function ContactWidget() {
               
 
           <nav className='ml-32 mx-2'>
-          <h2 className='text-charcoal scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
+          <h2 className='text-charcoal scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
             The Inner Circle
           </h2>
               <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>

@@ -21,7 +21,7 @@ const AccordionItem = ({ title, children }: AccordionProps) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center py-6 cursor-pointer"
       >
-        <span className="font-larken tracking-widest text-[13px] uppercase text-charcoal scale-y-90 py-0.5 ">{title}</span>
+        <span className="font-larken tracking-widest text-[13px] uppercase text-charcoal scale-y-85 py-0.5 ">{title}</span>
         <ChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} size={16}/>
       </button>
       {isOpen && <div className=" pb-6 font-lato text-sm text-grey">{children}</div>}
@@ -62,7 +62,7 @@ export default function ContactWidgetMobile() {
             <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
               Please contact RUHAVA Client Care Department on <br />
               Monday - Sunday, 10 a.m. - 8 p.m. (except National <br />
-              Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>ruhava.official@gmail.com</a>
+              Holidays) via email at <a className='underline cursor-pointer hover:decoration-0'>rescuebird18@gmail.com{/*ruhava.official@gmail.com*/}</a>
             </p>
         </AccordionItem>
           </nav>

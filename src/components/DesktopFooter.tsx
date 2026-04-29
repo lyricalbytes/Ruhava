@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
-import { faFacebook, faFacebookF, faInstagram, faYoutube, faLinkedin, faXTwitter, faSnapchat, faPinterest } from '@fortawesome/free-brands-svg-icons';
-import { motion } from "framer-motion";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
+// import { faFacebook, faFacebookF, faInstagram, faYoutube, faLinkedin, faXTwitter, faSnapchat, faPinterest } from '@fortawesome/free-brands-svg-icons';
+// import { motion } from "framer-motion";
 import Link from 'next/link';
 
 
@@ -10,14 +10,14 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal hidden md:block bottom-0 ">
       
-      <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-90 py-28 text-ivory">
+      <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-85 py-28 text-ivory">
           RUHAVA
         </h1>
 
         <div className='mt-8 grid grid-cols-4 gap-8 px-30 pb-20'>
           
           <nav className=''>
-          <h2 className='text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1'>
+          <h2 className='text-ivory scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1'>
             EXPLORE RUHAVA
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px] space-y-1">
@@ -30,19 +30,21 @@ export default function Footer() {
           </nav>
 
           <nav className=''>
-          <h2 className="text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1">
+          <h2 className="text-ivory scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1">
             The Collection
           </h2>
           <ul className="text-grey font-lato text-[14px] space-y-1">
             <li><Link href="/the-creation" className="hover:underline">The First Soul</Link></li>
             <li><Link href="/reserve" className="hover:underline">Request Allocation</Link></li>
-            <li><Link href="/craftsmanship" className="hover:underline">Art of the Flacon</Link></li>
-            <li><Link href="/craftsmanship" className="hover:underline">The Hurt Ones</Link></li>
+            <li><Link href="/reserve" className="hover:underline">Art of Gifting</Link></li>
+            <li><Link href="/faq" className="hover:underline">Common Inquiries</Link></li>
+            {/* <li><Link href="/craftsmanship" className="hover:underline">Art of the Flacon</Link></li> */}
+            {/* <li><Link href="/craftsmanship" className="hover:underline">The Hurt Ones</Link></li> */}
           </ul>
         </nav>
 
           <nav className=''>
-          <h2 className="text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1">
+          <h2 className="text-ivory scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1">
             Client Concierge
           </h2>
           <ul className="text-grey font-lato text-[14px] space-y-1">
@@ -50,7 +52,7 @@ export default function Footer() {
             <li><Link href="/shipping" className="hover:underline">Complimentary Delivery</Link></li>
             <li><Link href="/track" className="hover:underline">Track Reservation</Link></li>
             <li><Link href="/returns" className="hover:underline">Returns & Exchanges</Link></li>
-            <li><Link href="/faq" className="hover:underline">Common Inquiries</Link></li>
+            {/* <li><Link href="/faq" className="hover:underline">Common Inquiries</Link></li> */}
           </ul>
         </nav>
 
@@ -81,7 +83,7 @@ export default function Footer() {
         </nav>
 
           <nav className=''>
-          <h2 className="text-ivory scale-y-90 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1">
+          <h2 className="text-ivory scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-1">
             The House of Ruhava
           </h2>
           <ul className="text-grey font-lato text-[14px] space-y-1">
