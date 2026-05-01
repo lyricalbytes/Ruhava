@@ -177,7 +177,7 @@ useEffect(() => {
           className="flex flex-col gap-10"
         >
           {/* Web3Forms Access Key */}
-          <input type="hidden" name="access_key" value="YOUR_KEY_HERE" />
+          <input type="hidden" name="access_key" value="0ecca714-22c9-4b87-b620-754286bcf0f6" />
           
           {/* Floating Label Input Field */}
           {[

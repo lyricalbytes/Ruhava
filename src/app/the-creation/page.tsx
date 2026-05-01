@@ -149,6 +149,21 @@ useEffect(() => {
 
 </section>
 
+{/* opening
+
+Feeling
+
+origin
+
+composition
+
+Meaning
+
+object
+
+access */}
+
+
 <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-12 overflow-hidden scale-y-85">
 
       {/* 🔥 Subtle background gradient */}
