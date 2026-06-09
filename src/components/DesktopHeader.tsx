@@ -14,8 +14,10 @@ export default function DesktopHeader() {
 // ];
 
 const mainNavItems = [
-  { name: "THE HOUSE", href: "/the-house" },
+  
   { name: "THE FIRST SOUL", href: "/the-creation" },
+  { name: "THE HOUSE", href: "/the-house" },
+  
 ];
 
 const secondaryNavItems = [

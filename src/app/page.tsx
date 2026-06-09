@@ -72,7 +72,7 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
   return (
     <div ref={sectionRef} className="relative z-20 -mt-px bg-charcoal h-[78vh] w-full overflow-hidden border-b border-ivory/5">
       <Link href={href} scroll={scroll} passHref>
-        <section className="relative h-full w-full flex items-center justify-center cursor-pointer overflow-hidden">
+        <section className="relative h-full w-full flex items-center justify-center cursor-pointer overflow-hidden px-8">
           
           <motion.div
             style={{ 
@@ -186,21 +186,45 @@ export default function Home() {
         
         
 
+        
+
         <ParallaxSection 
-          image="/assets/h5.jpeg"
-          subtitle="The Alchemist’s House"
+          image="/assets/s1new.webp"
+          subtitle="The First Soul"
+          title={<>Born from memory. <br className="hidden lg:hidden" /> Made for beginnings.</>}
+          cta="Discover"
+          href="/the-creation"
+        />
+
+        <ParallaxSection 
+          image="/assets/s2new.webp"
+          subtitle="The House"
           title={<>A House of Scent <br className="hidden lg:hidden" /> and Memory</>}
           cta="Explore"
           href="/the-house"
         />
 
+        
+
+        
+
         <ParallaxSection 
-          image="/assets/c3.jpeg"
-          subtitle="Genesis"
-          title="The First Soul"
-          cta="Discover"
-          href="/the-creation"
+          image="/assets/s3new.webp"
+          subtitle="The Founder"
+          title={<>One Soul, <br className="hidden lg:hidden" /> Many Stories.</>}
+          cta="Read"
+          href="/the-founder"
         />
+
+        <ParallaxSection 
+          image="/assets/s4new.webp"
+          subtitle="The Archive"
+          title={<>For the first <br className="hidden lg:hidden" /> Fifty Souls</>}
+          cta="Claim"
+          href="/reserve"
+        />
+
+        
 
         
 
