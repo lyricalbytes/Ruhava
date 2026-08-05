@@ -192,7 +192,7 @@ export default function Home() {
 
         <ParallaxSection 
           // image="/assets/s1new.webp"
-          image="/assets/concrete2.png"
+          image="/assets/concrete2.webp"
           // subtitle="The First Soul"
           subtitle="LA COLLECTION LITTÉRAIRE"
           // subtitle="LITTÉRAIRE"

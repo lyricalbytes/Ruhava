@@ -132,7 +132,7 @@ useEffect(() => {
       
       <div className="relative w-full aspect-10/16 -mt-px lg:-top-18 md:aspect-video lg:w-full">
         <Image 
-        src="/assets/concrete-cropped2.jpeg"
+        src="/assets/concrete-cropped2.webp"
         alt="The First Soul"
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -210,7 +210,7 @@ useEffect(() => {
       
       <div className="relative w-full aspect-2/3 -mt-px lg:-top-18 md:aspect-video lg:w-full">
         <Image 
-        src="/assets/sea-and-castle.jpeg"
+        src="/assets/sea-and-castle.webp"
         alt="The First Soul"
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

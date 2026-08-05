@@ -121,14 +121,14 @@ useEffect(() => {
       <div id="top" className="px-6 md:px-20 lg:px-32 py-16 flex flex-col md:flex-row gap-10 lg:mt-17">
       <div className="flex lg:flex-col gap-6 lg:px-10">
       <Image
-      src="/assets/ChatGPT Image Jul 19, 2026 at 05_27_00 PM.png"
+      src="/assets/ChatGPT Image Jul 19, 2026 at 05_27_00 PM.webp"
       width={500}
       height={500}
       alt="The First Soul"
       className="w-full max-w-md mx-auto"
       />
       <Image
-      src="/assets/ChatGPT Image Jul 19, 2026 at 05_36_27 PM.png"
+      src="/assets/ChatGPT Image Jul 19, 2026 at 05_36_27 PM.webp"
       width={500}
       height={500}
       alt="The First Soul"
