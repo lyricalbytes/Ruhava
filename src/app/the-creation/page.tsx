@@ -197,7 +197,7 @@ useEffect(() => {
 
   
   <Link href="/reserve-solid">
-  <button className="mt-10 flex items-center gap-2 bg-amber text-ivory px-4 py-3 rounded-full text-[11.5px] tracking-widest uppercase hover:text-ivory transition cursor-pointer">
+  <button className="mt-10 flex items-center gap-2 bg-amber text-ivory px-4 py-3 rounded-full text-[11.5px] tracking-widest uppercase hover:text-ivory cursor-pointer  hover:brightness-95 overflow-hidden transition-all duration-700 ">
     <Handbag size={16} strokeWidth={1.5} />
     <span className="scale-y-85">Acquire</span>
   </button>
@@ -248,7 +248,7 @@ useEffect(() => {
 
   {/* CTA */}
   <Link href="/reserve-solid">
-  <button className="mt-10 flex items-center gap-2 bg-amber text-ivory px-4 py-3 rounded-full text-[11.5px] tracking-widest uppercase hover:text-ivory transition cursor-pointer">
+  <button className="mt-10 flex items-center gap-2 bg-amber text-ivory px-4 py-3 rounded-full text-[11.5px] tracking-widest uppercase hover:text-ivory cursor-pointer hover:brightness-95 overflow-hidden transition-all duration-700">
     {/* <Handbag size={16} strokeWidth={1.5} /> */}
     <span className="scale-y-85">Learn more</span>
   </button>
@@ -376,7 +376,7 @@ access */}
 
           {/* CTA */}
   <Link href="/reserve">
-  <button className="group relative lg:ml-30 lg:mt-4 ml-10 mt-4  flex text-center items-center gap-2 bg-transparent border border-ivory text-ivory px-4 py-3  text-[11.5px] tracking-widest uppercase hover:text-ivory transition cursor-pointer">
+  <button className="group relative lg:ml-30 lg:mt-4 ml-10 mt-4  flex text-center items-center gap-2 bg-transparent border border-ivory text-ivory px-4 py-3  text-[11.5px] tracking-widest uppercase hover:text-charcoal hover:bg-ivory transition-all duration-700 overflow-hidden cursor-pointer">
     {/* <Handbag size={16} strokeWidth={1.5} /> */}
     {/* <span className="scale-y-85">Acquire</span> */}
      <span className="scale-y-85">Discover</span>
