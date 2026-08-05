@@ -213,7 +213,7 @@ useEffect(() => {
               Composition
             </h2>
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            For THE FIRST SOUL, Harsh, Author of The Hurt Ones, Founder of Maison Ruhava, and RUHAVA In-House Perfumer-Creator, created a bold and confident composition.
+            For THE FIRST SOUL, Harsh, Founder of Maison Ruhava, and RUHAVA In-House Perfumer-Creator, created a bold and confident composition.
             </p>
 
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
