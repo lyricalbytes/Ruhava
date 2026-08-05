@@ -85,33 +85,33 @@ useLayoutEffect(() => {
   document.body.scrollTop = 0;
 }, []);
 
-useEffect(() => {
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true,
-  });
+// useEffect(() => {
+//   const lenis = new Lenis({
+//     duration: 1.2,
+//     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//     smoothWheel: true,
+//   });
 
-  // 3. THE RESET: Force Lenis to the top on every mount
-  // We wrap this in a frame request to ensure the DOM is ready
-  requestAnimationFrame(() => {
-    lenis.scrollTo(0, { immediate: true });
-  });
+//   // 3. THE RESET: Force Lenis to the top on every mount
+//   // We wrap this in a frame request to ensure the DOM is ready
+//   requestAnimationFrame(() => {
+//     lenis.scrollTo(0, { immediate: true });
+//   });
 
-  const raf = (time: number) => {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  };
-  requestAnimationFrame(raf);
+//   const raf = (time: number) => {
+//     lenis.raf(time);
+//     requestAnimationFrame(raf);
+//   };
+//   requestAnimationFrame(raf);
 
-  return () => {
-    lenis.destroy();
-    // Optional: Re-enable auto restoration when leaving
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'auto';
-    }
-  };
-}, []);
+//   return () => {
+//     lenis.destroy();
+//     // Optional: Re-enable auto restoration when leaving
+//     if ('scrollRestoration' in history) {
+//       history.scrollRestoration = 'auto';
+//     }
+//   };
+// }, []);
 
   return (
     <main className="bg-ivory text-charcoal font-lato relative   flex flex-col">
