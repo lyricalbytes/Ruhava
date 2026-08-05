@@ -101,7 +101,8 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
               //  whileInView={{ opacity: 1, y: 0 }}
               //  transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
               //  viewport={{ once: true }}
-               className="text-[26px] lg:text-[32px] scale-y-85 tracking-wide font-larken font-normal  text-ivory mb-5 leading-[1.1]"
+                className="text-[26px] lg:text-[32px] scale-y-85 tracking-wide font-larken font-normal  text-ivory mb-5 leading-[1.1]"
+              // className="text-[22px] lg:text-[28px] scale-y-85 tracking-widest font-larken uppercase font-medium  text-ivory mb-5 leading-[1.1]"
             >
               {title}
             </motion.h2>
@@ -139,37 +140,38 @@ export default function Home() {
   const footerOpacity = useTransform(footerScrollProgress, [0.2, 1], [0, 1]);
   const footerBlur = useTransform(footerScrollProgress, [0.2, 1], ["10px", "0px"]);
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.8,
+  //     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     smoothWheel: true,
+  //   });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
+  //   requestAnimationFrame(raf);
     
-    const timer = setTimeout(() => setLoading(false), 3500);
-    return () => {
-      lenis.destroy();
-      clearTimeout(timer);
-    };
-  }, []);
+  //   const timer = setTimeout(() => setLoading(false), 3500);
+  //   return () => {
+  //     lenis.destroy();
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
 
   return (
     <main className="bg-charcoal font-lato min-h-screen flex flex-col selection:bg-ivory selection:text-charcoal overflow-x-hidden relative">
       
 
-      {/* Cinematic Noise Layer */}
-      <div className="fixed inset-0 z-95 pointer-events-none opacity-[0.03] mix-blend-soft-light" 
-        style={{ 
-       backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
-     }}
-      />
+     {/* Cinematic Noise Layer */}
+<div 
+  className="fixed inset-0 z-95 pointer-events-none opacity-[0.03] mix-blend-soft-light" 
+  style={{ 
+    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` 
+  }}
+/>
       
       {/* 4. HEADER: Lower Z than Widgets */}
       <header className="fixed top-0 left-0 w-full z-100">
@@ -189,16 +191,21 @@ export default function Home() {
         
 
         <ParallaxSection 
-          image="/assets/s1new.webp"
-          subtitle="The First Soul"
+          // image="/assets/s1new.webp"
+          image="/assets/concrete2.png"
+          // subtitle="The First Soul"
+          subtitle="LA COLLECTION LITTÉRAIRE"
+          // subtitle="LITTÉRAIRE"
           title={<>Born from memory. <br className="hidden lg:hidden" /> Made for beginnings.</>}
           cta="Discover"
           href="/the-creation"
+          // href="/reserve-solid"
         />
 
         <ParallaxSection 
           image="/assets/s2new.webp"
-          subtitle="The House"
+          // subtitle="The House"
+          subtitle="The Maison"
           title={<>A House of Scent <br className="hidden lg:hidden" /> and Memory</>}
           cta="Explore"
           href="/the-house"

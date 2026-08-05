@@ -7,6 +7,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
 import { createPortal } from "react-dom";
+import Image from "next/image";
 
 // const navItems = [
 //   { name: "THE HOUSE", href: "/the-house" },
@@ -18,8 +19,20 @@ import { createPortal } from "react-dom";
 
 const mainNavItems = [
   
-  { name: "THE FIRST SOUL", href: "/the-creation" },
-  { name: "THE HOUSE", href: "/the-house" },
+  { name: "LITTÉRAIRE", href: "/" },
+  { name: "RESERVE", href: "/reserve-solid" },
+  // { name: "LA COLLECTION LITTÉRAIRE", href: "/" },
+  // { name: "LA COLLECTION SOUVENIR", href: "/" },
+  // { name: "LA COLLECTION HÉRITAGE", href: "/" },
+  // { name: "LES ATELIERS NOCTURNE", href: "/" },
+  // { name: "THE FIRST SOUL", href: "/the-creation" },
+  // { name: "LITTÉRAIRE", href: "#" },
+  // { name: "SOUVENIR", href: "#" },
+  // { name: "HÉRITAGE", href: "#" },
+  // { name: "NOCTURNE", href: "#" },
+  { name: "ALLIANCES", href: "#" },
+  { name: "THE MAISON", href: "/the-house" },
+  // { name: "THE HOUSE", href: "/the-house" },
   
 ];
 
@@ -67,9 +80,18 @@ export default function MobileHeader() {
           </button> 
         </div> 
 
-        <Link href="/" className="font-larken font-normal text-[20.5px] tracking-widest scale-y-85"><h1>
-          RUHAVA
-        </h1></Link>
+        <Link href="/" className="font-larken font-normal text-[20.5px] tracking-widest scale-y-90">
+        {/* <h1>
+                  RUHAVA
+                </h1> */}
+                <Image
+                src="/assets/Header-wordmark-removebg-preview.png"
+              width={400}
+              height={400}
+              alt="Ruhava"
+              className="w-28 max-w-md mx-auto my-2"
+               />
+        </Link>
 
          <div className="flex items-center gap-4">
          <button

@@ -2,6 +2,7 @@
 import { Search, User, Star, ShoppingBag, Handbag } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 
 export default function DesktopHeader() {
@@ -15,8 +16,20 @@ export default function DesktopHeader() {
 
 const mainNavItems = [
   
-  { name: "THE FIRST SOUL", href: "/the-creation" },
-  { name: "THE HOUSE", href: "/the-house" },
+  { name: "LITTÉRAIRE", href: "/the-creation" },
+  { name: "RESERVE", href: "/reserve-solid" },
+  // { name: "LA COLLECTION LITTÉRAIRE", href: "/" },
+  // { name: "LA COLLECTION SOUVENIR", href: "/" },
+  // { name: "LA COLLECTION HÉRITAGE", href: "/" },
+  // { name: "LES ATELIERS NOCTURNE", href: "/" },
+  // { name: "THE FIRST SOUL", href: "/the-creation" },
+  // { name: "LITTÉRAIRE", href: "#" },
+  // { name: "SOUVENIR", href: "#" },
+  // { name: "HÉRITAGE", href: "#" },
+  // { name: "NOCTURNE", href: "#" },
+  { name: "ALLIANCES", href: "#" },
+  { name: "THE MAISON", href: "/the-house" },
+  // { name: "THE HOUSE", href: "/the-house" },
   
 ];
 
@@ -67,9 +80,17 @@ useEffect(() => {
       isScrolled ? "py-3" : "py-5"
     } px-4 lg:px-12 xl:px-24`}>
         <div className="flex-1" /> 
-        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-85 mx-85"><h1>
+        <Link href="/" className="text-center font-larken font-normal text-[34px] tracking-widest flex-1 scale-y-90 mx-85">
+        {/* <h1>
           RUHAVA
-        </h1></Link>
+        </h1> */}
+        <Image
+        src="/assets/Header-wordmark-removebg-preview.png"
+      width={400}
+      height={400}
+      alt="Ruhava"
+      className="w-36 max-w-md mx-auto my-2.5"
+       /></Link>
          <div className="flex items-center justify-center gap-3 lg:gap-5 flex-1">
           <button
             className="cursor-pointer"
@@ -121,7 +142,7 @@ useEffect(() => {
   </div>
 
   {/* RIGHT (FOUNDER) */}
-  <div className="absolute right-4 lg:right-12 xl:right-24 pl-6">
+  <div className="absolute right-4 lg:right-12 xl:right-24 pl-6 mb-1">
     {secondaryNavItems.map((item) => (
       <Link
         key={item.href}

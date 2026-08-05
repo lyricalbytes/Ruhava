@@ -77,7 +77,7 @@ export default function ContactWidget() {
               <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
                 The First Soul is currently available exclusively <br />
                 through our digital atelier. Each flacon is hand- <br />
-                filled and numbered in our Gwalior studio.
+                filled and numbered in our studio.
               </p>
 
              

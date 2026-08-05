@@ -3,16 +3,24 @@ import { faFacebook, faFacebookF, faInstagram, faLinkedin, faPinterest, faSnapch
 import { motion } from "framer-motion";
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function Footer() {
   return (
     <footer className="bg-charcoal block md:hidden z-30">
 
+    <Image
+                src="/assets/footerwordmark-removebg-preview.png"
+                width={400}
+                height={400}
+                alt="Ruhava"
+                className="w-40 max-w-md mx-auto my-2 scale-y-90 py-28 text-center font-larken font-normal text-[34px] tracking-widest text-ivory"
+    />
   
-    <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-85 py-15 text-ivory">
+    {/* <h1 className="text-center font-larken font-normal text-[34px] tracking-widest scale-y-85 py-15 text-ivory">
           RUHAVA
-    </h1>
+    </h1> */}
 
     <div className='mt-0'>
           
@@ -21,7 +29,8 @@ export default function Footer() {
             EXPLORE RUHAVA
           </h2>
             <ul className="space-x-4 text-grey font-lato text-[14px] space-y-0.5">
-              <li><Link href="/the-house" className="hover:underline">The House</Link></li>
+             {/* <li><Link href="/the-house" className="hover:underline">The House</Link></li> */}
+            <li><Link href="/the-house" className="hover:underline">The Maison</Link></li>
             <li><Link href="/founder" className="hover:underline">The Founder</Link></li>
             <li><Link href="/journal" className="hover:underline">The Journal</Link></li>
             <li><Link href="/ethical-sourcing" className="hover:underline">Sourcing & Ethics</Link></li>
@@ -102,7 +111,7 @@ export default function Footer() {
       </div>
       <div>
       <p className="text-sm text-grey font-lato text-[12px] mx-auto w-full text-center pb-8">
-        &copy; {new Date().getFullYear()} RUHAVA. Handcrafted in Gwalior, INDIA.
+        &copy; {new Date().getFullYear()} RUHAVA. Handcrafted in INDIA.
       </p>
       </div>
       

@@ -86,7 +86,7 @@ useEffect(() => {
       />
       <div className="w-full max-w-md mx-auto lg:px-7">
         <div className="lg:text-left text-center">
-        <h1 className="font-larken tracking-wider text-[25px] text-charcoal scale-y-85">
+        <h1 className="font-larken tracking-wider text-[25px] text-charcoal scale-y-90">
           The First Soul
         </h1>
         <hr className="mt-0.5 border-none h-1 bg-charcoal" />
@@ -98,12 +98,14 @@ useEffect(() => {
           More details
         </button>
         <p className="text-[14.5px] text-grey mt-3 ">
-          Bottle 04 of 50
+          {/* Bottle 04 of 50 */}
+          Flacon 00 of 07
         </p>
         </div>
         <div className="flex justify-between items-center mt-5">
           <p className="scale-y-90 font-semibold font-lato tracking-widest">
-          ₹ 500<span className="text-grey">*</span>
+          {/* ₹ 500<span className="text-grey">*</span> */}
+          ₹ 690<span className="text-grey">*</span>
           </p>
           <button
             className="cursor-pointer hidden"
@@ -116,20 +118,25 @@ useEffect(() => {
         <p className="mt-3 tracking-wider font-lato text-[12px] font-semibold scale-y-90">
           1 SIZE AVAILABLE
         </p>
-        <p className="text-[14px] font-lato mt-3.5 font-thin tracking-wide">
+        <p className="text-[14px] font-lato mt-1 font-thin tracking-wide">
           8 ml
         </p>
+        <p className="mt-4 tracking-wider font-lato text-[12px] font-semibold scale-y-90">
+          THIS PRODUCT IS SOLD OUT
+        </p>
         <button
-        onClick={() => setIsOpen(true)}
-        className="bg-charcoal text-ivory w-full py-5 font-medium text-[11.5px] cursor-pointer tracking-widest scale-y-85 font-lato mt-5  hover:bg-grey transition ease-in uppercase"
+        // onClick={() => setIsOpen(true)}
+        className="bg-ivory border border-charcoal text-charcoal w-full py-4.5 font-semibold text-[11.5px] cursor-pointer tracking-widest scale-y-90 font-lato mt-2  hover:bg-ivory/20 transition ease-in uppercase"
         >
-        ACQUIRE Your Flacon
+        {/* ACQUIRE Your Flacon */}
+        Notify me when available
         </button>
         <div className="scale-y-95 text-grey font-light text-[14px] mt-3.5">
           *MRP (inclusive of all taxes). <span className="underline underline-offset-5 decoration-charcoal cursor-pointer scale-y-95  text-grey font-light text-[14px]">More information</span>
         </div>
         <div className="mt-4.5 underline underline-offset-5  decoration-charcoal cursor-pointer scale-y-95 font-light text-[14.5px] text-charcoal">
-          Soul Note
+          {/* Soul Note */}
+          Client Reviews
         </div>
       </div>
       </div>
