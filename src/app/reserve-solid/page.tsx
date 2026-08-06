@@ -213,15 +213,15 @@ useLayoutEffect(() => {
               Composition
             </h2>
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            For THE FIRST SOUL, Harsh, Founder of Maison Ruhava, and RUHAVA In-House Perfumer-Creator, created a bold and confident composition.
+            For THE FIRST SOUL, Harsh, Founder of The Maison, and RUHAVA In-House Perfumer-Creator, created a bold and confident composition.
             </p>
 
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            The bright, luminous Jasmine accord, with facets of crisp pear, vanilla and orange blossom, soars before revealing a rich and dark floral heart of black coffee. This coffee, with a naturally bold scent and a subtle jolty note, is grown in the fields in Coorg. It is accompanied by a sophisticated touch of patchouli and a mysterious cedar woody accord.
+            The bright, luminous Jasmine accord, with facets of crisp pear, vanilla and orange blossom, soars before revealing a rich and dark floral heart of black coffee. This coffee, with a naturally bold scent and a subtle jolty note, is grown in the fields in Coorg. It is accompanied by a sophisticated touch of patchouli and a mysterious cedar-wood accord.
             </p> 
 
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            An olfactory whirlwind leaves a coffee-vanilla fragrance trail that is modern and energetic. 
+            A pocket-sized aromatic treasure leaves a coffee-vanilla fragrance trail that is modern and energetic. 
             </p>
 
             {/* <h2 className="font-larken tracking-widest text-[13px] uppercase text-charcoal scale-y-85 pb-4">

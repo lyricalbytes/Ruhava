@@ -130,13 +130,14 @@ useLayoutEffect(() => {
 
     <section className="items-center text-center flex flex-col">
       
-      <div className="relative w-full aspect-10/16 -mt-px lg:-top-18 md:aspect-video lg:w-full">
+      <div className="relative w-full max-w-8xl mx-auto aspect-10/16 -mt-px lg:-top-18 md:aspect-video lg:w-full">
         <Image 
         src="/assets/concrete-cropped2.webp"
         alt="The First Soul"
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="object-cover w-full max-w-8xl mx-auto" 
+        sizes="100vw"
+        quality={90}
+        className="object-cover" 
         />
       </div>
 
@@ -177,7 +178,7 @@ useLayoutEffect(() => {
 
 </section> */}
 
-<section className="lg:h-[72vh] h-[55vh] flex flex-col items-center lg:mt-50 mt-45  text-center px-6 lg:px-12 lg:mx-100 mx-5">
+<section className="lg:h-[74vh] h-[57vh] flex flex-col items-center lg:mt-51 mt-45  text-center px-6 lg:px-12 lg:mx-100 mx-5">
 
   
   <p className="text-[12.5px] tracking-widest uppercase opacity-70 scale-y-85">
@@ -192,7 +193,7 @@ useLayoutEffect(() => {
 
   
   <p className="mt-2 text-sm lg:text-[14.5px] max-w-xl  opacity-80 scale-y-90">
-   THE FIRST SOUL. A luminous, electrifying and spellbinding new SOUL, from la collection LITTÉRAIRE. An olfactory whirlwind leaves a coffee-vanilla fragrance trail that is modern and energetic.
+   THE FIRST SOUL. A luminous, electrifying and spellbinding new SOUL, from la collection LITTÉRAIRE. A pocket-sized aromatic treasure leaves a coffee-vanilla fragrance trail that is modern and energetic.
   </p>
 
   
@@ -208,13 +209,14 @@ useLayoutEffect(() => {
 
 <section className="items-center text-center flex flex-col">
       
-      <div className="relative w-full aspect-2/3 -mt-px lg:-top-18 md:aspect-video lg:w-full">
+      <div className="relative w-full max-w-8xl mx-auto aspect-10/16 -mt-px lg:-top-18 md:aspect-video lg:w-full">
         <Image 
         src="/assets/sea-and-castle.webp"
         alt="The First Soul"
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="object-cover w-full max-w-8xl mx-auto" 
+        sizes="100vw"
+        quality={90}
+        className="object-cover" 
         />
       </div>
 
@@ -242,8 +244,7 @@ useLayoutEffect(() => {
   <p className="mt-2 text-sm lg:text-[14.5px] max-w-xl  opacity-80 scale-y-90">
     Bold and confident, the unexpected coffee-vanilla fragrance trail of THE FIRST 
     SOUL blends the intoxicating notes of Jasmine with a Gourmand heart of black coffee. A 
-    luminous composition accompanied by a touch of Patchouli and a mysterious cedar 
-    woody accord.
+    luminous composition accompanied by a touch of Patchouli and a mysterious cedar-wood accord.
   </p>
 
   {/* CTA */}
@@ -371,7 +372,7 @@ access */}
     The Ruhava Art of Perfuming
    </h2>  
    <span className="font-lato text-ivory uppercase lg:ml-30 lg:mt-4 ml-10 mt-4 text-[10px] lg:text-[10px] tracking-wider lg:mr-240 mr-10 leading-tight">
-    SCENTED WITH Dark AND Sweet NOTES, Ruhava LITTÉRAIRE FRAGRANCES AND BODY PRODUCTS OFFER NUMEROUS WAYS TO EXPRESS YOUR INDIVIDUALITY.
+    SCENTED WITH Dark AND Sweet NOTES, La Collection LITTÉRAIRE RUHAVA FRAGRANCES AND BODY PRODUCTS OFFER NUMEROUS WAYS TO EXPRESS YOUR INDIVIDUALITY.
    </span>   
 
           {/* CTA */}
