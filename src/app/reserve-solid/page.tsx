@@ -190,7 +190,7 @@ useLayoutEffect(() => {
         <h1>Product Information</h1>
       </div>
 
-      <div className='bg-ivory py-15 z-40 block lg:px-50 px-20'>
+      <div className='bg-ivory py-15 z-40 block lg:px-50'>
 
       {/*  <AccordionItem title="Contact an Advisor">
         <p>Monday - Sunday, 10 a.m. - 8 p.m.</p>
