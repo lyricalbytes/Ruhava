@@ -19,7 +19,7 @@ import Image from "next/image";
 
 const mainNavItems = [
   
-  { name: "LITTÉRAIRE", href: "/" },
+  { name: "LITTÉRAIRE", href: "/the-creation" },
   { name: "RESERVE", href: "/reserve-solid" },
   // { name: "LA COLLECTION LITTÉRAIRE", href: "/" },
   // { name: "LA COLLECTION SOUVENIR", href: "/" },
