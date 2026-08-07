@@ -130,9 +130,20 @@ useLayoutEffect(() => {
 
     <section className="items-center text-center flex flex-col">
       
-      <div className="relative w-full max-w-8xl mx-auto aspect-10/16 -mt-px lg:-top-18 md:aspect-video lg:w-full">
+      <div className="relative w-full max-w-8xl mx-auto aspect-10/16 lg:block hidden -mt-px lg:-top-18 md:aspect-video lg:w-full">
         <Image 
         src="/assets/concrete-cropped2.webp"
+        alt="The First Soul"
+        fill
+        sizes="100vw"
+        quality={75}
+        className="object-cover" 
+        />
+      </div>
+
+      <div className="relative w-full max-w-8xl mx-auto aspect-10/16 lg:hidden block -mt-px lg:-top-18 md:aspect-video lg:w-full">
+        <Image 
+        src="/assets/concrete-cropped2-mobile.webp"
         alt="The First Soul"
         fill
         sizes="100vw"
@@ -178,7 +189,7 @@ useLayoutEffect(() => {
 
 </section> */}
 
-<section className="lg:h-[74vh] h-[57vh] flex flex-col items-center lg:mt-51 mt-45  text-center px-6 lg:px-12 lg:mx-100 mx-5">
+<section className="lg:h-[72vh] h-[56vh] flex flex-col items-center lg:mt-50 mt-45  text-center px-6 lg:px-12 lg:mx-100 mx-5">
 
   
   <p className="text-[12.5px] tracking-widest uppercase opacity-70 scale-y-85">
