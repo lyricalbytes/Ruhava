@@ -136,7 +136,7 @@ useLayoutEffect(() => {
         alt="The First Soul"
         fill
         sizes="100vw"
-        quality={90}
+        quality={75}
         className="object-cover" 
         />
       </div>
@@ -215,7 +215,7 @@ useLayoutEffect(() => {
         alt="The First Soul"
         fill
         sizes="100vw"
-        quality={90}
+        quality={75}
         className="object-cover" 
         />
       </div>
@@ -372,7 +372,7 @@ access */}
     The Ruhava Art of Perfuming
    </h2>  
    <span className="font-lato text-ivory uppercase lg:ml-30 lg:mt-4 ml-10 mt-4 text-[10px] lg:text-[10px] tracking-wider lg:mr-240 mr-10 leading-tight">
-    SCENTED WITH Dark AND Sweet NOTES, La Collection LITTÉRAIRE RUHAVA FRAGRANCES AND BODY PRODUCTS OFFER NUMEROUS WAYS TO EXPRESS YOUR INDIVIDUALITY.
+    SCENTED WITH Dark AND Sweet NOTES, Ruhava LITTÉRAIRE FRAGRANCES AND BODY PRODUCTS OFFER NUMEROUS WAYS TO EXPRESS YOUR INDIVIDUALITY.
    </span>   
 
           {/* CTA */}
