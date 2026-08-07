@@ -206,14 +206,14 @@ useLayoutEffect(() => {
               Product
             </h2>
             <p className='space-x-4 text-charcoal font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            A luminous SOUL that dazzles with splendour. THE FIRST SOUL, a magnetic fragrance that releases an olfactory whirlwind, diffusing a coffee-vanilla fragrance trail that is modern and energetic.
+            A luminous SOUL that dazzles with splendour. THE FIRST SOUL, a magnetic fragrance that releases A pocket-sized aromatic treasure, diffusing a coffee-vanilla fragrance trail that is modern and energetic.
 
             </p>
             <h2 className="font-larken tracking-widest text-[13px] uppercase text-charcoal scale-y-85 ">
               Composition
             </h2>
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            For THE FIRST SOUL, Harsh, Founder of The Maison, and RUHAVA In-House Perfumer-Creator, created a bold and confident composition.
+            For THE FIRST SOUL, Harsh, Founder of the Maison, and RUHAVA In-House Perfumer-Creator, created a bold and confident composition.
             </p>
 
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
@@ -252,7 +252,7 @@ It represents perpetual movement and renewal, which is echoed by the round bottl
             </p> 
 
             <p className=' space-x-4 text-charcaol font-lato text-[14px] leading-relaxed pb-3 font-light'> 
-            "When I leave my hoodie behind, everyone knows that it's mine" - Patron Ruhava
+            "When I leave my hoodie behind, everyone knows that it's mine" - Patron, RUHAVA
             </p>
 
         </AccordionItem>
