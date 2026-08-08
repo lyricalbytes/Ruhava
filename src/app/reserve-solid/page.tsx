@@ -155,7 +155,7 @@ useLayoutEffect(() => {
         </div>
         <div className="flex justify-between items-center mt-5">
           <p className="scale-y-90 font-semibold font-lato tracking-widest">
-          ₹ 490<span className="text-grey">*</span>
+          ₹ 590<span className="text-grey">*</span>
           </p>
           <button
             className="cursor-pointer hidden"
