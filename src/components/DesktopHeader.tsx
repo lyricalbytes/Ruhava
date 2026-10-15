@@ -16,8 +16,14 @@ export default function DesktopHeader() {
 
 const mainNavItems = [
   
-  { name: "LITTÉRAIRE", href: "/the-creation" },
-  { name: "RESERVE", href: "/reserve-solid" },
+  
+  // { name: "SHOP", href: "/#" },
+  // { name: "LITTÉRAIRE COLLECTION", href: "/the-creation" },
+   { name: "LA COLLECTION LITTÉRAIRE", href: "/the-creation" },
+  // { name: "JEWELLERY", href: "#" },
+  // { name: "FRAGRANCE", href: "/the-creation" },
+  // Shop all, New Arrivals, Bestsellers, Gift Sets, 
+      { name: "RUHAVA IMPACT", href: "/ruhava-impact" },
   // { name: "LA COLLECTION LITTÉRAIRE", href: "/" },
   // { name: "LA COLLECTION SOUVENIR", href: "/" },
   // { name: "LA COLLECTION HÉRITAGE", href: "/" },
@@ -27,14 +33,15 @@ const mainNavItems = [
   // { name: "SOUVENIR", href: "#" },
   // { name: "HÉRITAGE", href: "#" },
   // { name: "NOCTURNE", href: "#" },
-  { name: "ALLIANCES", href: "#" },
+  // { name: "ALLIANCES", href: "#" },
+      { name: "FIND US", href: "/find-us" },
   { name: "THE MAISON", href: "/the-house" },
   // { name: "THE HOUSE", href: "/the-house" },
   
 ];
 
 const secondaryNavItems = [
-  { name: "THE FOUNDER", href: "/founder" },
+  { name: "THE FOUNDER", href: "/#" },
 ];
 
 // Inside your DesktopHeader component:
@@ -71,11 +78,34 @@ useEffect(() => {
   return () => window.removeEventListener("scroll", handleScroll);
 }, [lastScrollY]);
 
+  // const [showShippingBanner, setShowShippingBanner] = useState(true);
+
   return (
     <header className={`hidden md:block text-charcoal bg-ivory sticky top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
     isScrolled ? "backdrop-blur-md shadow-sm" : ""
   }`}>
-      <div className="bg-charcoal pb-2"></div>
+
+      {/* {showShippingBanner && (
+  <div className="relative border-b border-charcoal bg-pastel text-charcoal py-4 font-lato text-[10.5px] uppercase tracking-widest">
+    <div className="flex items-center justify-center gap-1">
+      
+      <span>LA COLLECTION LITTÉRAIRE · DROP I OPENS 11 OCTOBER</span>
+    </div>
+
+    <button
+      type="button"
+      onClick={() => setShowShippingBanner(false)}
+      aria-label="Close"
+      className="absolute right-4 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center text-charcoal/70 transition-colors hover:text-charcoal cursor-pointer"
+    >
+      <span className="relative block h-4 w-4">
+        <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-current" />
+        <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-current" />
+      </span>
+    </button>
+  </div>
+)} */}
+
       <div className={`flex items-center justify-between transition-all duration-500 ${
       isScrolled ? "py-3" : "py-5"
     } px-4 lg:px-12 xl:px-24`}>

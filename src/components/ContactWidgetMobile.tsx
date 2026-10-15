@@ -153,7 +153,7 @@ export default function ContactWidgetMobile() {
           */}
 
           <nav className=''>
-            <AccordionItem2 title="The Inner Circle"> 
+            <AccordionItem2 title="The Ruhava Circle"> 
           
               <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
                 Avenue of Information from RUHAVA

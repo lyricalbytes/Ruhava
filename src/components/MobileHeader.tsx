@@ -19,8 +19,12 @@ import Image from "next/image";
 
 const mainNavItems = [
   
-  { name: "LITTÉRAIRE", href: "/the-creation" },
-  { name: "RESERVE", href: "/reserve-solid" },
+  // { name: "SHOP", href: "/#" },
+  //  { name: "LITTÉRAIRE COLLECTION", href: "/the-creation" },
+   { name: " LA COLLECTION LITTÉRAIRE", href: "/the-creation" },
+       { name: "RUHAVA IMPACT", href: "/ruhava-impact" },
+  // { name: "LITTÉRAIRE", href: "/the-creation" },
+  // { name: "RESERVE", href: "/reserve-solid" },
   // { name: "LA COLLECTION LITTÉRAIRE", href: "/" },
   // { name: "LA COLLECTION SOUVENIR", href: "/" },
   // { name: "LA COLLECTION HÉRITAGE", href: "/" },
@@ -30,7 +34,8 @@ const mainNavItems = [
   // { name: "SOUVENIR", href: "#" },
   // { name: "HÉRITAGE", href: "#" },
   // { name: "NOCTURNE", href: "#" },
-  { name: "ALLIANCES", href: "#" },
+  // { name: "ALLIANCES", href: "#" },
+      { name: "FIND US", href: "/find-us" },
   { name: "THE MAISON", href: "/the-house" },
   // { name: "THE HOUSE", href: "/the-house" },
   
@@ -59,7 +64,7 @@ export default function MobileHeader() {
 
   return (
     <header className=" block md:hidden sticky top-0 z-30">
-      <div className="bg-charcoal pb-2"></div>
+      {/* <div className="bg-charcoal pb-2"></div> */}
       <div className="flex items-center justify-between py-2.5 px-4 bg-ivory">
         <div className="flex items-center gap-4">
           {/* CRITICAL: Ensure this button has no lower z-index parents blocking it */}

@@ -87,7 +87,7 @@ export default function ContactWidget() {
 
           <nav className='ml-32 mx-2'>
           <h2 className='text-charcoal scale-y-85 font-larken tracking-widest text-[13.5px] py-0.5 uppercase mb-2'>
-            The Inner Circle
+            The Ruhava Circle
           </h2>
               <p className='space-x-4 text-grey font-lato text-[14px] leading-relaxed'>
                 Avenue of Information from RUHAVA

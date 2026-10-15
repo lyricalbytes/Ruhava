@@ -28,14 +28,31 @@ const lato = Lato({
   variable: "--font-lato",
 });
 
+const dancing = localFont({
+   src: '../fonts/Sacramento-Regular.ttf', // path to your font file
+  variable: '--font-dancing',            // defines a CSS variable
+  weight: '400',                     // specifies the range of weights supported
+  display: 'swap',
+});
+
 /* Defining optimised custom next/font replacing @font-face */
+// const larken = localFont({
+//   src: [
+//     { path: "../fonts/Larken-Bold.otf", weight: "700" },
+//     { path: "../fonts/Larken-Regular.otf", weight: "400" },
+//   ],
+//   variable: "--font-larken",
+// });
+
 const larken = localFont({
   src: [
-    { path: "../fonts/Larken-Bold.otf", weight: "700" },
-    { path: "../fonts/Larken-Regular.otf", weight: "400" },
+    { path: "../fonts/PlayfairDisplay-Bold.ttf", weight: "700" },
+    { path: "../fonts/PlayfairDisplay-Regular.ttf", weight: "400" },
   ],
   variable: "--font-larken",
 });
+
+
 
 export const metadata: Metadata = {
   title: "RUHAVA Official Website - India : Fragrance | RUHAVA",
@@ -62,7 +79,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${larken.variable} ${lato.variable} ${tenor.variable} antialiased`}>
+      <body className={`${larken.variable} ${lato.variable} ${tenor.variable} ${dancing.variable} antialiased`}>
          
          {/* Wrap app with CartProvider */}
         <CartProvider>

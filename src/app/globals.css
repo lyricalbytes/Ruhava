@@ -12,16 +12,55 @@
   --color-maroon: #621414;
   --color-taupe: #8B7D6B;
   --color-amber: #c6aa70;
+  --color-burgundy: #4A122C;
+  /* --color-pastel: #FFF2EC; */
+  /* --color-pastel: #fff8f5; */
+  --color-pastel:  #F7F3EC;
+  --color-mutedpeach: #FBE8D5;
+  --color-pastelone: #FFDFD3;
 }
 
 @theme inline {
   --font-lato: var(--font-lato), sans-serif;
-  --font-larken: var(--font-larken), sans-serif;
+  /* --font-larken: var(--font-larken), sans-serif; */
   --font-tenor: var(--font-tenor), sans-serif;
+  --font-larken: var(--font-larken), sans-serif;
+  --font-dancing: var(--font-dancing), cursive;
 }
 
 html, body {
   background-color: #1a1a1a; /* Match your footer/charcoal color exactly */
   overscroll-behavior-y: none; /* Stops the "bounce" that reveals the white gap */
   overscroll-behavior-x: none;
+  scroll-behavior: smooth;
+}
+
+.kiri-viewport {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  position: relative;
+
+  transform: translateY(26px);
+}
+
+.kiri-sprite-img {
+  display: block;
+
+  width: 640px;
+  height: 128px;
+
+  max-width: none;
+
+  animation: kiri-idle 2.5s steps(4, end) infinite;
+}
+
+@keyframes kiri-idle {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-512px);
+  }
 }

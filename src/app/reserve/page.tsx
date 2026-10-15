@@ -10,7 +10,7 @@ import { Search, User, Star, ShoppingBag } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import ContactWidgetMobile from "@/components/ContactWidgetMobile";
-import Lenis from 'lenis';
+// import Lenis from 'lenis';
 
   import { useLayoutEffect } from "react"; // Add this import
 
@@ -31,45 +31,45 @@ const footerScale = useTransform(scrollYProgress, [0.8, 1], [0.95, 1]);
 
 // Inside your Reserve component in reserve.tsx
 
-useLayoutEffect(() => {
+// useLayoutEffect(() => {
   // 1. Force the browser to stop trying to restore scroll position
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
+  // if ('scrollRestoration' in history) {
+  //   history.scrollRestoration = 'manual';
+  // }
 
   // 2. Instant reset before the page paints
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-}, []);
+//   window.scrollTo(0, 0);
+//   document.documentElement.scrollTop = 0;
+//   document.body.scrollTop = 0;
+// }, []);
 
-useEffect(() => {
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true,
-  });
+// useEffect(() => {
+//   const lenis = new Lenis({
+//     duration: 1.2,
+//     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//     smoothWheel: true,
+//   });
 
   // 3. THE RESET: Force Lenis to the top on every mount
   // We wrap this in a frame request to ensure the DOM is ready
-  requestAnimationFrame(() => {
-    lenis.scrollTo(0, { immediate: true });
-  });
+//   requestAnimationFrame(() => {
+//     lenis.scrollTo(0, { immediate: true });
+//   });
 
-  const raf = (time: number) => {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  };
-  requestAnimationFrame(raf);
+//   const raf = (time: number) => {
+//     lenis.raf(time);
+//     requestAnimationFrame(raf);
+//   };
+//   requestAnimationFrame(raf);
 
-  return () => {
-    lenis.destroy();
-    // Optional: Re-enable auto restoration when leaving
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'auto';
-    }
-  };
-}, []);
+//   return () => {
+//     lenis.destroy();
+//     // Optional: Re-enable auto restoration when leaving
+//     if ('scrollRestoration' in history) {
+//       history.scrollRestoration = 'auto';
+//     }
+//   };
+// }, []);
 
   return (
     <main className="bg-ivory text-charcoal font-lato relative  h-[110vh] flex flex-col">
@@ -105,7 +105,7 @@ useEffect(() => {
         <div className="flex justify-between items-center mt-5">
           <p className="scale-y-90 font-semibold font-lato tracking-widest">
           {/* ₹ 500<span className="text-grey">*</span> */}
-          ₹ 690<span className="text-grey">*</span>
+          ₹ 500<span className="text-grey">*</span>
           </p>
           <button
             className="cursor-pointer hidden"
