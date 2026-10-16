@@ -15,7 +15,7 @@ export default function StoreStatusPlaque() {
     pointer-events-none
   absolute
   left-1/2
-  top-[0.7%]
+  top-[0.48%]
   z-30
   w-[min(78vw,250px)]
   -translate-x-1/2
@@ -23,7 +23,7 @@ export default function StoreStatusPlaque() {
   sm:w-[290px]
   lg:left-auto
   lg:right-[40%]
-  lg:top-[1%]
+  lg:top-[0.92%]
   lg:w-[300px]
   lg:translate-x-0
   "

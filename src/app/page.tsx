@@ -202,7 +202,7 @@ export default function Home() {
       
 
       {/* 6. SCROLLING CONTENT: Slides up over the Footer */}
-      <div ref={mainContentRef} className="text-ivory top-6 bg-charcoal flex flex-col relative z-30  shadow-[0_50px_100px_rgba(0,0,0,0.5)] pt-16 lg:pt-24">
+      <div ref={mainContentRef} className="text-ivory top-6 bg-charcoal flex flex-col relative z-30  shadow-[0_50px_100px_rgba(0,0,0,0.5)] pt-8 lg:pt-24">
         
 
         

@@ -1624,7 +1624,7 @@ export default function FestiveEdit() {
     </div>
 
     {/* RIGHT — QUESTIONS */}
-    <div className="border-t border-[#25231F]/10">
+    <div className=" border-[#25231F]/10">
 
       {/* FAQ ITEM 01 */}
       <details className="group border-b border-[#25231F]/10">
@@ -2098,7 +2098,7 @@ export default function FestiveEdit() {
       </details>
 
       {/* FAQ ITEM 08 */}
-      <details className="group border-b border-[#25231F]/10">
+      <details className="group  border-[#25231F]/10">
         <summary
           className="
             flex

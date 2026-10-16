@@ -17,7 +17,7 @@ export default function AnnouncementBar() {
         <u>Shop Now</u>
       </b> */}
     {/* LA COLLECTION LITTÉRAIRE · DROP I · OPENS 11 OCTOBER */}
-    LA COLLECTION LITTÉRAIRE · FIRST EDITION · OPENS 18 OCTOBER
+    LA COLLECTION LITTÉRAIRE · FIRST EDITION 
   </span>
 </div>
 
