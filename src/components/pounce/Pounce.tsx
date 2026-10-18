@@ -7,6 +7,8 @@ import Kiri from "./Kiri";
 import GoldenLeaf from "./GoldenLeaf";
 import { pounceConfig } from "@/data/pounceConfig";
 
+import Link from "next/link";
+
 interface PounceProps {
   variant?: "hero" | "compact" | "product";
   showJoinButton?: boolean;
@@ -24,7 +26,7 @@ export default function Pounce({
   const [leapFinished, setLeapFinished] = useState(false);
 
   const preorderDate = useMemo(
-  () => new Date("2026-10-18T00:00:00+05:30"),
+  () => new Date("2026-10-24T11:59:00+05:30"),
   []
 );
 
@@ -110,7 +112,7 @@ const countdown = useMemo(() => {
 
   return (
     <section
-    
+        id="thepounce"
       aria-label="The Pounce"
       className={`relative w-full overflow-hidden ${containerClasses} bg-[#F9F8F3] text-[#25231F]`}
     >
@@ -154,7 +156,8 @@ const countdown = useMemo(() => {
     >
       <div className="text-center">
         <p className="font-lato text-[9px] uppercase tracking-[0.28em] text-[#777168]">
-          Pre-orders open in
+          {/* Pre-orders open in */}
+          Pre-orders closing in
         </p>
 
         <div className="mt-4 flex items-center justify-center gap-3 sm:gap-6">
@@ -199,7 +202,8 @@ const countdown = useMemo(() => {
       </p>
 
       <p className="mt-2 font-larken text-xl text-[#25231F] sm:text-2xl">
-        Pre-orders are now open.
+        {/* Pre-orders are now open. */}
+        Pre-orders are now closed.
       </p>
     </motion.div>
   )}
@@ -303,13 +307,14 @@ const countdown = useMemo(() => {
                       opacity: 0,
                       y: -40,
                     }}
-                    className="font-lato absolute right-0 top-0 whitespace-nowrap text-[10px] uppercase tracking-[0.16em] text-[#8C6D34]"
+                    className="mt-5  font-lato absolute left-0 lg:right-0 top-0 whitespace-nowrap text-[10px] uppercase tracking-[0.16em] text-[#8C6D34]"
                   >
                     Kiri noticed you.
                   </motion.span>
                 )}
               </AnimatePresence>
 
+                <Link href="https://rzp.io/rzp/G3Y3UOB">
               <button
                 type="button"
                 onClick={handleJoin}
@@ -332,10 +337,13 @@ const countdown = useMemo(() => {
                   disabled:text-[#777168]
                   disabled:hover:bg-transparent
                   disabled:hover:text-[#777168]
+                  mt-5
+                  
                 "
               >
                 {joined ? "You're in" : "Join the Pounce"}
               </button>
+              </Link>
 
               
             </div>

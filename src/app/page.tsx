@@ -21,6 +21,7 @@ import FirstSoulLayeringBalm from "@/components/HeroProduct";
 import MadeSlowly from "@/components/MadeSlowly";
 import { Festive } from "next/font/google";
 import FestiveEdit from "@/components/festiveedit";
+import FinalCTA from "@/components/FinalCTA";
 
 
 
@@ -218,7 +219,7 @@ export default function Home() {
           // title={<>Wearable Poetry. Carry your Universe <br className="hidden lg:hidden" /> in your pocket.</>}
           title={<>Carry your Universe <br className="hidden lg:hidden" /> in your pocket.</>}
           cta="Discover"
-          href="#"
+          href="https://rzp.io/rzp/G3Y3UOB"
           // href="/reserve-bundle"
           // href="/reserve-solid"
         />
@@ -282,7 +283,7 @@ export default function Home() {
           href="/reserve"
         />
 
-        
+        <FinalCTA />
 
         
 

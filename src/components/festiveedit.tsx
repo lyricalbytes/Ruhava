@@ -183,7 +183,7 @@ export default function FestiveEdit() {
 
           <div className="mt-9 sm:mt-11">
             <a
-              href="#expressions"
+              href="https://rzp.io/rzp/G3Y3UOB"
               className="
                 inline-flex
                 items-center
@@ -203,7 +203,8 @@ export default function FestiveEdit() {
                 lg:pb-0
               "
             >
-              Discover the Festive Edit
+                {/* Discover the Festive Edit */}
+              the Festive Edit · ₹499
               <span className="ml-3 text-[0.8rem] hidden">
                 →
               </span>
@@ -785,7 +786,7 @@ export default function FestiveEdit() {
 
         <div className="mt-8 sm:mt-10">
           <a
-            href="#"
+            
             className="
               inline-flex
               items-center
@@ -801,6 +802,7 @@ export default function FestiveEdit() {
               transition-colors
               duration-300
               hover:decoration-[#25231F]
+              cursor-pointer
             "
           >
             Share Your Ritual
@@ -1199,7 +1201,8 @@ export default function FestiveEdit() {
             sm:tracking-[0.28em]
           "
         >
-          At 5,000 views
+          {/* At 5,000 views */}
+          At 5k views
         </p>
       </div>
 
@@ -1247,7 +1250,8 @@ export default function FestiveEdit() {
             sm:tracking-[0.28em]
           "
         >
-          At 50,000 views
+          {/* At 50,000 views */}
+          At 50k views
         </p>
       </div>
 
@@ -1297,7 +1301,7 @@ export default function FestiveEdit() {
     <div className="mt-8 text-center sm:mt-10">
 
       <a
-        href="#"
+        href="/terms"
         className="
           inline-flex
           items-center
@@ -1313,6 +1317,7 @@ export default function FestiveEdit() {
           transition-colors
           duration-300
           hover:decoration-[#25231F]
+          cursor-pointer
         "
       >
         Read the Terms

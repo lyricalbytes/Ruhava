@@ -124,16 +124,19 @@ export default function FirstSoulLayeringBalm() {
   lg:mr-50
   mr-25
   ">
-            Meet First Soul, a pocket-sized layering balm: a warm, luminous
+            {/* Meet First Soul, a pocket-sized layering balm: a warm, luminous
             accord that lingers softly, travels effortlessly, and turns
             everyday moments into something quietly unforgettable wherever
-            you go.
+            you go. */}
+            A luminous, electrifying and spellbinding new Fragrance Layering Balm, 
+            from LA COLLECTION LITTÉRAIRE. A pocket-sized aromatic treasure leaves 
+            a coffee-vanilla fragrance trail that is modern and energetic.
           </p>
 
           {/* CTA */}
           <div className="mt-4 sm:mt-4">
             <a
-              href="#expressions"
+              href="https://rzp.io/rzp/G3Y3UOB"
               className="
                 inline-flex
                 items-center

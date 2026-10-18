@@ -210,7 +210,8 @@ sm:py-7
               sm:text-[22px]
             "
           >
-            Opening 18 October
+            {/* Opening 18 October */}
+            Pre-orders are now open.
           </p>
 
           <div

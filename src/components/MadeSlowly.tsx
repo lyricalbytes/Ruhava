@@ -531,13 +531,15 @@ export default function MadeSlowly() {
               mr-20
         "
       >
-        A luminous fragrance that lingers close, revealing something deeper
-        with time.
+        {/* A luminous fragrance that lingers close, revealing something deeper
+        with time. */}
+        Bold and confident, the unexpected coffee-vanilla fragrance trail of THE FIRST 
+    SOUL blends the intoxicating notes of Jasmine with a Gourmand heart of black coffee. 
       </p>
 
       <div className="mt-8 sm:mt-10">
         <a
-          href="#expressions"
+          href="https://rzp.io/rzp/G3Y3UOB"
           className="
             inline-flex
             items-center
