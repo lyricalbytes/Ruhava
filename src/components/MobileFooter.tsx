@@ -100,7 +100,7 @@ export default function Footer() {
       
       
       <div className='mx-auto w-full text-center py-2 mb-2.5'>
-      <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[13px] px-2 hover:underline'>Follow the House</a>
+      <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[13px] px-2 hover:underline'>Follow the Maison</a>
       {/* <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faInstagram} /></a> */}
       {/* <a href="/" className='text-grey text-[11px] px-2'><FontAwesomeIcon icon={faFacebookF} /></a>
       <a href="/" className='text-grey text-[12px] px-2'><FontAwesomeIcon icon={faYoutube} /></a> */}

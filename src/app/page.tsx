@@ -22,6 +22,7 @@ import MadeSlowly from "@/components/MadeSlowly";
 import { Festive } from "next/font/google";
 import FestiveEdit from "@/components/festiveedit";
 import FinalCTA from "@/components/FinalCTA";
+import RuhavaGazette from "@/components/Gazette";
 
 
 
@@ -212,18 +213,20 @@ export default function Home() {
         <ParallaxSection 
           // image="/assets/s1new.webp"
           // image="/assets/concrete2new.png"
-          image="/assets/navratri-campaign.webp"
+          // image="/assets/navratri-campaign.webp"
+          image="/assets/Celebrations.webp"
           // subtitle="The First Soul"
           subtitle="LA COLLECTION LITTÉRAIRE"
           // subtitle="LITTÉRAIRE"
           // title={<>Wearable Poetry. Carry your Universe <br className="hidden lg:hidden" /> in your pocket.</>}
           title={<>Carry your Universe <br className="hidden lg:hidden" /> in your pocket.</>}
           cta="Discover"
-          href="https://rzp.io/rzp/G3Y3UOB"
+          href="#expressions"
           // href="/reserve-bundle"
           // href="/reserve-solid"
         />
 
+        
         
           
          <Pounce variant="hero"  />
@@ -239,6 +242,7 @@ export default function Home() {
 
          <FestiveEdit />
 
+        <RuhavaGazette />
          
 
         {/* <ParallaxSection 

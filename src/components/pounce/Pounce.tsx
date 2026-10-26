@@ -26,7 +26,7 @@ export default function Pounce({
   const [leapFinished, setLeapFinished] = useState(false);
 
   const preorderDate = useMemo(
-  () => new Date("2026-10-24T11:59:00+05:30"),
+  () => new Date("2026-10-31T11:59:00+05:30"),
   []
 );
 
@@ -73,7 +73,7 @@ const countdown = useMemo(() => {
     if (soldOut) return 1;
 
     return Math.min(
-      Math.max(config.pounceProgress, 0.02),
+      Math.max(config.pounceProgress, 0.0833),
       0.96
     );
   }, [config.pounceProgress, soldOut]);
@@ -125,7 +125,10 @@ const countdown = useMemo(() => {
             </p>
 
             <h2 className="font-larken text-2xl tracking-tight text-[#25231F] sm:text-3xl md:text-4xl scale-y-90">
-              Kiri is getting closer.
+              {/* Kiri is getting closer. */}
+              Kiri has made her first move.
+              
+              
             </h2>
           </div>
 
@@ -281,7 +284,10 @@ const countdown = useMemo(() => {
                 animate={{ opacity: 1 }}
               >
                 <p className="font-lato text-xs tracking-wide text-[#777168]">
-                  Twelve Pieces. Five Expressions. One First Pounce.
+                  {/* Twelve Pieces. Five Expressions. One First Pounce. */}
+                  The first piece of La Collection Littéraire has found its home. <span className="text-[#25231F]">11 pieces remain.</span>
+                  {/* <b>11 pieces remain.</b> */}
+
                 </p>
               </motion.div>
             )}
@@ -314,7 +320,7 @@ const countdown = useMemo(() => {
                 )}
               </AnimatePresence>
 
-                <Link href="https://rzp.io/rzp/G3Y3UOB">
+                <Link href="#expressions">
               <button
                 type="button"
                 onClick={handleJoin}
@@ -341,9 +347,24 @@ const countdown = useMemo(() => {
                   
                 "
               >
-                {joined ? "You're in" : "Join the Pounce"}
+                {/* {joined ? "You're in" : "Join the Pounce"} */}
+                {joined ? "The first edition awaits" : "Pre-order the first edition"}
               </button>
               </Link>
+
+              {/* <p
+              className="
+                
+                  font-lato
+                  
+                  text-xs
+                  tracking-wide
+                  text-[#25231F]
+                 
+                "
+              >
+                11 pieces remain.
+              </p> */}
 
               
             </div>

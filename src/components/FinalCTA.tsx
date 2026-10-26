@@ -145,7 +145,7 @@ export default function FinalCTA() {
             The Pounce begins · 18 October
           </p>
 
-          <div className="px-10 text-left">
+          <div className="lg:px-0 text-left">
 
           <p
             className="

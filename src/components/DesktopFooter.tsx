@@ -126,7 +126,7 @@ export default function Footer() {
       </div> */}
 
       <div className='ml-195 mr-30 flex'>
-      <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[13px] px-2 hover:underline'>Follow the House</a>
+      <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[13px] px-2 hover:underline'>Follow the Maison</a>
       {/* <a href="https://instagram.com/ruhavaofficial" className='text-grey text-[12px] px-3'><FontAwesomeIcon icon={faInstagram} /></a> */}
       {/* <a href="/" className='text-grey text-[11px] px-3'><FontAwesomeIcon icon={faFacebookF} /></a>
       <a href="/" className='text-grey text-[12px] px-3'><FontAwesomeIcon icon={faYoutube} /></a> */}

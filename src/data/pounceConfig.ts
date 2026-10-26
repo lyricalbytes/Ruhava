@@ -32,7 +32,7 @@ export const pounceConfig: PounceConfig = {
   status: "LOCKED",
 
   totalUnits: 12,
-  claimedUnits: 0,
+  claimedUnits: 1,
 
   pounceProgress: 0.04,
 

@@ -152,8 +152,12 @@ export default function MadeSlowly() {
               lg:mr-0
             "
           >
-            Fine fragrance, made in small quantities with carefully selected
+            {/* Fine fragrance, made in small quantities with carefully selected
             fragrance materials. Each batch is considered, personal, and
+            limited by design. */}
+            Fine fragrance, made slowly in small quantities with carefully 
+            selected, IFRA-compliant fragrance materials. Each formulation 
+            is considered with care, each batch personal, and every edition 
             limited by design.
           </p>
 
@@ -364,8 +368,8 @@ export default function MadeSlowly() {
             text-[#777168]
           "
         >
-          {/* Triple-filtered for a smooth, refined base. */}
-          Triple-filtered 
+          Triple-filtered for a smooth, refined base.
+          {/* Triple-filtered  */}
         </p>
       </div>
 
@@ -400,8 +404,8 @@ export default function MadeSlowly() {
             text-[#777168]
           "
         >
-          {/* Lightweight emollience with a silky finish. */}
-          Lightweight
+           Lightweight emollience with a silky finish. 
+          {/* Lightweight */}
         </p>
       </div>
 
@@ -428,8 +432,8 @@ export default function MadeSlowly() {
             text-[#777168]
           "
         >
-          {/* Vitamin E to help condition the skin. */}
-          Vitamin E
+          Vitamin E to help condition the skin. 
+          {/* Vitamin E */}
         </p>
       </div>
 

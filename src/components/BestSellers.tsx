@@ -33,26 +33,11 @@ const products: Product[] = [
     size: "5 gm",
     image: "/assets/quiet-chapter-5gm.webp",
     href: "https://rzp.io/rzp/G3Y3UOB",
-    price: "₹179",
+    price: "₹199",
     originalPrice: "₹299",
     buttonText: "Pre-order Now",
-    badge: "ONLY 2 to be MADE",
-  },
-
-  {
-    id: "first-soul-8ml",
-    name: "The First Soul Extrait de Parfum Spray",
-    // subtitle: "Coffee · Vanilla · Memory",
-    // subtitle: "Midnight Café · Memory",
-    subtitle: "Mysterious · Bold · Night wear",
-    size: "8 ml",
-    image: "/assets/thefirstsouledp19.webp",
-    href: "#",
-    price: "₹500",
-    originalPrice: "₹700",
-    // buttonText: "Sold Out",
-    buttonText: "Notify me when available",
-    badge: "FULLY CLAIMED",
+    // badge: "ONLY 2 to be MADE",
+    badge: "1 of 2 available",
   },
 
   {
@@ -72,21 +57,6 @@ const products: Product[] = [
   },
 
   {
-    id: "first-soul-10gm",
-    name: "Fragrance Layering Balm - First Soul",
-    // subtitle: "Coffee · Vanilla · Memory",
-    // subtitle: "Midnight Café · Memory",
-    subtitle: "Indulgent · Rich · Winter Wear",
-    size: "10 gm",
-    image: "/assets/first-soul-10gm.webp",
-    href: "#",
-    price: "₹400",
-    originalPrice: "₹600",
-    buttonText: "Coming Soon",
-    badge: "New Arrival",
-  },
-
-  {
     id: "velvet-verse",
     name: "Fragrance Layering Balm - Velvet Verse",
     // subtitle: "French Vanilla · Soft · Creamy",
@@ -99,26 +69,6 @@ const products: Product[] = [
     originalPrice: "₹299",
     buttonText: "Pre-order Now",
     badge: "ONLY 2 to be MADE",
-  },
-
-  
-
-  
-
-  
-
-  {
-    id: "first-soul-5gm",
-    name: "Fragrance Layering Balm - First Soul",
-    // subtitle: "Coffee · Vanilla · Memory",
-    subtitle: "Midnight Café · Memory · Parties",
-    size: "5 gm",
-    image: "/assets/Minimalist Balm Jar with RR Monogram Lid.webp",
-    href: "#",
-    price: "₹300",
-    originalPrice: "₹500",
-    buttonText: "Coming Soon",
-    badge: "New Arrival",
   },
 
   {
@@ -148,6 +98,65 @@ const products: Product[] = [
     badge: "ONLY 2 to be MADE",
     buttonText: "Pre-order Now",
   },
+
+  {
+    id: "first-soul-8ml",
+    name: "The First Soul Extrait de Parfum Spray",
+    // subtitle: "Coffee · Vanilla · Memory",
+    // subtitle: "Midnight Café · Memory",
+    subtitle: "Mysterious · Bold · Night wear",
+    size: "8 ml",
+    image: "/assets/thefirstsouledp19.webp",
+    href: "#",
+    price: "₹500",
+    originalPrice: "₹700",
+    // buttonText: "Sold Out",
+    buttonText: "Notify me when available",
+    badge: "FULLY CLAIMED",
+  },
+
+  
+
+  {
+    id: "first-soul-10gm",
+    name: "Fragrance Layering Balm - First Soul",
+    // subtitle: "Coffee · Vanilla · Memory",
+    // subtitle: "Midnight Café · Memory",
+    subtitle: "Indulgent · Rich · Winter Wear",
+    size: "10 gm",
+    image: "/assets/first-soul-10gm.webp",
+    href: "#",
+    price: "₹400",
+    originalPrice: "₹600",
+    buttonText: "Coming Soon",
+    badge: "New Arrival",
+  },
+
+  
+
+  
+
+  
+
+  
+
+  {
+    id: "first-soul-5gm",
+    name: "Fragrance Layering Balm - First Soul",
+    // subtitle: "Coffee · Vanilla · Memory",
+    subtitle: "Midnight Café · Memory · Parties",
+    size: "5 gm",
+    image: "/assets/Minimalist Balm Jar with RR Monogram Lid.webp",
+    href: "#",
+    price: "₹300",
+    originalPrice: "₹500",
+    buttonText: "Coming Soon",
+    badge: "New Arrival",
+  },
+
+  
+
+  
 
   {
     id: "first-soul-15gm",
@@ -220,6 +229,7 @@ const scrollLeft = () => {
 
   return (
     <section
+    id="expressions"
       className="
         relative
         overflow-hidden
@@ -285,7 +295,9 @@ lg:px-30
                 Expressions
               </p>
 
-              <p
+            <Link href="https://rzp.io/rzp/G3Y3UOB"> 
+              <button
+             
                 className="
                   font-lato
                   lg:mt-[3rem]
@@ -303,7 +315,8 @@ lg:px-30
               >
                 
                 Shop Now
-              </p>
+              </button>
+              </Link>
 
               {/* <p
                 className="
